@@ -1,0 +1,2 @@
+BusTracker/CM4/Debug/
+BusTracker/CM0PLUS/Debug/
