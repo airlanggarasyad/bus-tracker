@@ -670,3 +670,22 @@
 2022-12-02 14:45:58,596 [ERROR] ConfigurationRetriever:139 - IOException on connection: connect timed out
 2022-12-02 14:46:00,763 [ERROR] AdobePublisher:162 - Exception while opening the connection: java.net.SocketTimeoutException: connect timed out
 2022-12-02 14:46:04,742 [ERROR] ConfigurationRetriever:139 - IOException on connection: connect timed out
+2022-12-02 15:05:37,437 [ERROR] ConfigurationRetriever:139 - IOException on connection: connect timed out
+2022-12-02 15:05:41,343 [ERROR] ConfigurationRetriever:139 - IOException on connection: connect timed out
+2022-12-02 15:05:44,363 [ERROR] ConfigurationRetriever:139 - IOException on connection: connect timed out
+2022-12-02 15:05:46,369 [ERROR] ConfigurationRetriever:139 - IOException on connection: connect timed out
+2022-12-02 15:10:07,931 [ERROR] ConfigurationRetriever:139 - IOException on connection: connect timed out
+2022-12-02 15:10:09,940 [ERROR] ConfigurationRetriever:139 - IOException on connection: connect timed out
+2022-12-02 15:10:12,842 [ERROR] ConfigurationRetriever:139 - IOException on connection: connect timed out
+2022-12-02 15:10:15,179 [ERROR] AdobePublisher:162 - Exception while opening the connection: java.net.SocketTimeoutException: connect timed out
+2022-12-02 15:10:17,182 [ERROR] AdobePublisher:162 - Exception while opening the connection: java.net.SocketTimeoutException: connect timed out
+2022-12-02 15:10:19,184 [ERROR] AdobePublisher:162 - Exception while opening the connection: java.net.SocketTimeoutException: connect timed out
+2022-12-02 15:10:36,062 [ERROR] ConfigurationRetriever:139 - IOException on connection: connect timed out
+2022-12-03 19:14:37,492 [INFO] Activator:177 - 
+
+
+2022-12-03 19:14:37,493 [INFO] Activator:178 - !SESSION log4j initialized
+2022-12-03 19:14:43,437 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2022-12-03 19:15:08,270 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2022-12-03 19:15:08,270 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2022-12-03 19:15:08,271 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.

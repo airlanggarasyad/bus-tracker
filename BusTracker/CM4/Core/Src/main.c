@@ -21,7 +21,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include <stdio.h>
+#include <string.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -45,7 +46,8 @@ UART_HandleTypeDef huart1;
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
-
+static const uint8_t TESEO_LIV3FL_ADDRESS = 0x3A << 1;
+static const uint8_t REG_DATA = 0x00;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -79,8 +81,9 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-  uint8_t receivedData[100] = {0};
-  uint8_t message[15] = "Received Data: ";
+  uint8_t receivedData[100];
+  uint8_t buff[100];
+  HAL_StatusTypeDef ret;
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -107,17 +110,38 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  if (HAL_I2C_IsDeviceReady(&hi2c1, 0x3A <<1 + 0, 2, 10) == HAL_OK) {
-	  		HAL_I2C_Master_Receive(&hi2c1,  0x3A <<1 + 0, (uint8_t *)receivedData, sizeof(receivedData), 1000);
+	  ret = HAL_I2C_IsDeviceReady(&hi2c1, TESEO_LIV3FL_ADDRESS, 2, 10);
 
-	  		HAL_UART_Transmit(&huart2, (uint8_t*)message, sizeof(message), HAL_MAX_DELAY);
-	  		HAL_UART_Transmit(&huart2, (uint8_t*)receivedData, sizeof(receivedData), HAL_MAX_DELAY);
+	  if (ret != HAL_OK) {
+		  sprintf((char*)buff, "Device is not ready \r\n");
+	  } else {
+		  ret = HAL_I2C_Master_Receive(&hi2c1, TESEO_LIV3FL_ADDRESS, receivedData, sizeof(receivedData), HAL_MAX_DELAY);
 
-	  		while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY);
-	  	} else {
-	  		uint8_t state[10] = "DEVICE IS NOT READY\n";
-	  		HAL_UART_Transmit(&huart2, (uint8_t*)state, sizeof(state), HAL_MAX_DELAY);
-	  	}
+		  if (ret != HAL_OK) {
+			  sprintf((char*)buff, "Error Rx \r\n");
+		  } else {
+			  sprintf((char*)buff, "%s", (char*)receivedData);
+		  }
+	  }
+
+	  HAL_UART_Transmit(&huart2, buff, strlen((char*)buff), HAL_MAX_DELAY);
+
+	  HAL_Delay(500);
+
+	  // OLD CODE
+//	  if (HAL_I2C_IsDeviceReady(&hi2c1, 0x3A <<1 + 0, 2, 10) == HAL_OK) {
+//	  		HAL_I2C_Master_Receive(&hi2c1,  0x3A <<1 + 0, (uint8_t *)receivedData, sizeof(receivedData), 1000);
+//
+//	  		HAL_UART_Transmit(&huart2, (uint8_t*)message, sizeof(message), HAL_MAX_DELAY);
+//	  		HAL_UART_Transmit(&huart2, (uint8_t*)receivedData, sizeof(receivedData), HAL_MAX_DELAY);
+//
+////	  		while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY);
+//	  	} else {
+//	  		uint8_t state[10] = "DEVICE IS NOT READY\n";
+//	  		while(HAL_UART_Transmit(&huart2, (uint8_t*)state, sizeof(state), HAL_MAX_DELAY) == HAL_OK);
+//
+//	  		HAL_Delay(200);
+//	  	}
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
