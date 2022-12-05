@@ -1119,3 +1119,14 @@
 2022-12-05 10:47:37,118 [INFO] IPUIPlugin:79 - create IPUIPlugin
 2022-12-05 10:47:38,123 [INFO] OpenFileManager:327 - Restore cursor
 2022-12-05 11:00:45,966 [ERROR] AdobePublisher:162 - Exception while opening the connection: java.net.SocketTimeoutException: Read timed out
+2022-12-05 20:56:55,444 [INFO] Activator:177 - 
+
+
+2022-12-05 20:56:55,445 [INFO] Activator:178 - !SESSION log4j initialized
+2022-12-05 20:57:01,040 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2022-12-05 20:57:25,274 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2022-12-05 20:57:25,275 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2022-12-05 20:57:25,275 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2022-12-05 21:14:32,915 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Warning: NLS missing message: ExternalToolsPreferencePage_External_tool_project_builders_migration_2 in: org.eclipse.ui.externaltools.internal.ui.ExternalToolsUIMessages
+2022-12-05 21:14:32,917 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Warning: NLS missing message: ExternalToolsPreferencePage_Prompt_before_migrating_3 in: org.eclipse.ui.externaltools.internal.ui.ExternalToolsUIMessages
+2022-12-05 21:14:32,920 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Warning: NLS missing message: ExternalToolsPreferencePage_1 in: org.eclipse.ui.externaltools.internal.ui.ExternalToolsUIMessages

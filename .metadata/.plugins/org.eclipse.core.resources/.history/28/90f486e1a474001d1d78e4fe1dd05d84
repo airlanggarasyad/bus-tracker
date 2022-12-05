@@ -79,16 +79,9 @@ int main(void)
 
   /* USER CODE BEGIN Init */
   uint8_t receivedData[1000];
+  uint8_t buff[100];
 
-  char stringGPSData[1000];
-  char buff[100];
-  char *ptr;
-
-  int messageIndex = 0;
-
-  const char* desiredNMEA = "GPRMC";
-
-  float latitude, longitude, time;
+  const char* desiredNMEA = "$GPGGA";
 
   HAL_StatusTypeDef ret;
   /* USER CODE END Init */
@@ -115,7 +108,6 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  // Start reading data
 	  ret = HAL_I2C_IsDeviceReady(&hi2c1, TESEO_LIV3FL_ADDRESS, 2, 10);
 
 	  if (ret != HAL_OK) {
@@ -128,35 +120,6 @@ int main(void)
 		  }
 	  }
 
-
-	  // Parsing GPGGA data
-	  strcpy(stringGPSData, (char*)receivedData);
-	  ptr = strstr(stringGPSData, desiredNMEA);
-
-	  if(*ptr == 'GPRMC') {
-		  while(1) {
-			  buff[messageIndex] = *ptr;
-			  messageIndex++;
-
-			  *ptr = *(ptr + messageIndex);
-
-			  if (*ptr == '\n') {
-				  buff[messageIndex] = '\0';
-				  break;
-			  }
-		  }
-
-		  sscanf(buff, "GPRMC,%f,A,%f,N,%f,", &time, &latitude, &longitude);
-
-		  char data[100];
-		  sprintf(data, "Time: %f Lat: %f Long: %f", time, latitude, longitude);
-
-		  HAL_UART_Transmit(&huart2, (uint8_t*)data, strlen(data), HAL_MAX_DELAY);
-
-		  HAL_Delay(1);
-	  }
-
-	  // Parsing data
 
     /* USER CODE END WHILE */
 

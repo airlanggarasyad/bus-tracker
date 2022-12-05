@@ -86,7 +86,7 @@ int main(void)
 
   int messageIndex = 0;
 
-  const char* desiredNMEA = "GPRMC";
+  const char desiredNMEA[5] = "GPRMC";
 
   float latitude, longitude, time;
 

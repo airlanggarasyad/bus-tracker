@@ -86,8 +86,6 @@ int main(void)
 
   int messageIndex = 0;
 
-  const char* desiredNMEA = "GPRMC";
-
   float latitude, longitude, time;
 
   HAL_StatusTypeDef ret;
@@ -131,7 +129,7 @@ int main(void)
 
 	  // Parsing GPGGA data
 	  strcpy(stringGPSData, (char*)receivedData);
-	  ptr = strstr(stringGPSData, desiredNMEA);
+	  ptr = strstr(stringGPSData, "GPRMC");
 
 	  if(*ptr == 'GPRMC') {
 		  while(1) {
