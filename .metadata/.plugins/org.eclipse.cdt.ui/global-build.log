@@ -1,4 +1,4 @@
-14:43:50 **** Build of configuration Debug for project BusTracker_CM4 ****
+12:25:43 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
 make -j7 all 
 arm-none-eabi-gcc "/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal.d" -MT"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal.o"
 arm-none-eabi-gcc "/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_cortex.d" -MT"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_cortex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_cortex.o"
@@ -8,22 +8,27 @@ arm-none-eabi-gcc "/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracke
 arm-none-eabi-gcc "/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_flash.d" -MT"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_flash.o"
 arm-none-eabi-gcc "/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_flash_ex.d" -MT"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_flash_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_flash_ex.o"
 arm-none-eabi-gcc "/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_gpio.d" -MT"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_gpio.o"
+../Core/Src/main.c: In function 'main':
 arm-none-eabi-gcc "/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_i2c.d" -MT"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_i2c.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_i2c.o"
 arm-none-eabi-gcc "/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_i2c_ex.d" -MT"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_i2c_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_i2c_ex.o"
 arm-none-eabi-gcc "/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_pwr.d" -MT"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_pwr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_pwr.o"
 arm-none-eabi-gcc "/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_pwr_ex.d" -MT"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_pwr_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_pwr_ex.o"
 arm-none-eabi-gcc "/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_rcc.d" -MT"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_rcc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_rcc.o"
+../Core/Src/main.c:85:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
 arm-none-eabi-gcc "/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_rcc_ex.d" -MT"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_rcc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_rcc_ex.o"
 arm-none-eabi-gcc "/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_tim.d" -MT"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_tim.o"
+   85 |   const char* desiredNMEA = "$GPGGA";
+      |               ^~~~~~~~~~~
+At top level:
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
 arm-none-eabi-gcc "/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_tim_ex.d" -MT"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_tim_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_tim_ex.o"
+   49 | static const uint8_t REG_DATA = 0x00;
 arm-none-eabi-gcc "/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_uart.d" -MT"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_uart.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_uart.o"
 arm-none-eabi-gcc "/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_uart_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_uart_ex.d" -MT"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_uart_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_uart_ex.o"
-arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32wl55jcix.d" -MT"Core/Startup/startup_stm32wl55jcix.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Startup/startup_stm32wl55jcix.o" "../Core/Startup/startup_stm32wl55jcix.s"
+      |                      ^~~~~~~~
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc "../Core/Src/stm32wlxx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32wlxx_hal_msp.d" -MT"Core/Src/stm32wlxx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32wlxx_hal_msp.o"
 arm-none-eabi-gcc "../Core/Src/stm32wlxx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32wlxx_it.d" -MT"Core/Src/stm32wlxx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32wlxx_it.o"
-arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/syscalls.o"
-arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sysmem.o"
 arm-none-eabi-gcc "/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/Common/System/system_stm32wlxx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Common/System/system_stm32wlxx.d" -MT"Common/System/system_stm32wlxx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Common/System/system_stm32wlxx.o"
 arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: BusTracker_CM4.elf
@@ -31,438 +36,28 @@ Finished building target: BusTracker_CM4.elf
 arm-none-eabi-size   BusTracker_CM4.elf 
 arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
    text	   data	    bss	    dec	    hex	filename
-  13688	     20	   1932	  15640	   3d18	BusTracker_CM4.elf
+  18720	    120	   1808	  20648	   50a8	BusTracker_CM4.elf
 Finished building: default.size.stdout
  
 Finished building: BusTracker_CM4.list
  
-14:44:01 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
-make -j7 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:109:43: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
-  109 |    if (HAL_I2C_IsDeviceReady(&hi2c1, 0x3A <<1 + 0, 2, 10) == HAL_OK) {
-      |                                           ^~
-../Core/Src/main.c:110:43: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
-  110 |      HAL_I2C_Master_Receive(&hi2c1,  0x3A <<1 + 0, (uint8_t *)receivedData, sizeof(receivedData), 1000);
-      |                                           ^~
-../Core/Src/main.c:115:26: warning: initializer-string for array of 'unsigned char' is too long
-  115 |      uint8_t state[10] = "DEVICE IS NOT READY\n";
-      |                          ^~~~~~~~~~~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: BusTracker_CM4.elf
- 
-arm-none-eabi-size   BusTracker_CM4.elf 
-arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
-   text	   data	    bss	    dec	    hex	filename
-  16308	     20	   1932	  18260	   4754	BusTracker_CM4.elf
-Finished building: default.size.stdout
- 
-Finished building: BusTracker_CM4.list
- 
-14:44:50 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
-make -j7 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:109:43: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
-  109 |    if (HAL_I2C_IsDeviceReady(&hi2c1, 0x3A <<1 + 0, 2, 10) == HAL_OK) {
-      |                                           ^~
-../Core/Src/main.c:110:43: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
-  110 |      HAL_I2C_Master_Receive(&hi2c1,  0x3A <<1 + 0, (uint8_t *)receivedData, sizeof(receivedData), HAL_MAX_DELAY);
-      |                                           ^~
-../Core/Src/main.c:115:26: warning: initializer-string for array of 'unsigned char' is too long
-  115 |      uint8_t state[10] = "DEVICE IS NOT READY\n";
-      |                          ^~~~~~~~~~~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: BusTracker_CM4.elf
- 
-arm-none-eabi-size   BusTracker_CM4.elf 
-arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
-   text	   data	    bss	    dec	    hex	filename
-  16308	     20	   1932	  18260	   4754	BusTracker_CM4.elf
-Finished building: default.size.stdout
- 
-Finished building: BusTracker_CM4.list
- 
-14:45:32 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
-make -j7 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:109:43: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
-  109 |    if (HAL_I2C_IsDeviceReady(&hi2c1, 0x3A <<1 + 0, 2, 10) == HAL_OK) {
-      |                                           ^~
-../Core/Src/main.c:110:43: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
-  110 |      HAL_I2C_Master_Receive(&hi2c1,  0x3A <<1 + 0, (uint8_t *)receivedData, sizeof(receivedData), HAL_MAX_DELAY);
-      |                                           ^~
-../Core/Src/main.c:115:26: warning: initializer-string for array of 'unsigned char' is too long
-  115 |      uint8_t state[10] = "DEVICE IS NOT READY\n";
-      |                          ^~~~~~~~~~~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: BusTracker_CM4.elf
- 
-arm-none-eabi-size   BusTracker_CM4.elf 
-arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
-   text	   data	    bss	    dec	    hex	filename
-  16308	     20	   1932	  18260	   4754	BusTracker_CM4.elf
-Finished building: default.size.stdout
- 
-Finished building: BusTracker_CM4.list
- 
-14:45:52 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
-make -j7 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:109:43: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
-  109 |    if (HAL_I2C_IsDeviceReady(&hi2c1, 0x3A <<1 + 0, 2, 10) == HAL_OK) {
-      |                                           ^~
-../Core/Src/main.c:110:43: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
-  110 |      HAL_I2C_Master_Receive(&hi2c1,  0x3A <<1 + 0, (uint8_t *)receivedData, sizeof(receivedData), HAL_MAX_DELAY);
-      |                                           ^~
-../Core/Src/main.c:115:26: warning: initializer-string for array of 'unsigned char' is too long
-  115 |      uint8_t state[10] = "DEVICE IS NOT READY\n";
-      |                          ^~~~~~~~~~~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: BusTracker_CM4.elf
- 
-arm-none-eabi-size   BusTracker_CM4.elf 
-arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
-   text	   data	    bss	    dec	    hex	filename
-  16308	     20	   1932	  18260	   4754	BusTracker_CM4.elf
-Finished building: default.size.stdout
- 
-Finished building: BusTracker_CM4.list
- 
-14:46:47 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
-make -j7 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:109:43: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
-  109 |    if (HAL_I2C_IsDeviceReady(&hi2c1, 0x3A <<1 + 0, 2, 10) == HAL_OK) {
-      |                                           ^~
-../Core/Src/main.c:110:43: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
-  110 |      HAL_I2C_Master_Receive(&hi2c1,  0x3A <<1 + 0, (uint8_t *)receivedData, sizeof(receivedData), 1000);
-      |                                           ^~
-../Core/Src/main.c:115:26: warning: initializer-string for array of 'unsigned char' is too long
-  115 |      uint8_t state[10] = "DEVICE IS NOT READY\n";
-      |                          ^~~~~~~~~~~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: BusTracker_CM4.elf
- 
-arm-none-eabi-size   BusTracker_CM4.elf 
-arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
-   text	   data	    bss	    dec	    hex	filename
-  16308	     20	   1932	  18260	   4754	BusTracker_CM4.elf
-Finished building: default.size.stdout
- 
-Finished building: BusTracker_CM4.list
- 
-14:48:35 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
-make -j7 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:87:3: error: expected ',' or ';' before 'SystemClock_Config'
-   87 |   SystemClock_Config();
-      |   ^~~~~~~~~~~~~~~~~~
-../Core/Src/main.c:110:43: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
-  110 |    if (HAL_I2C_IsDeviceReady(&hi2c1, 0x3A <<1 + 0, 2, 10) == HAL_OK) {
-      |                                           ^~
-../Core/Src/main.c:111:43: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
-  111 |      HAL_I2C_Master_Receive(&hi2c1,  0x3A <<1 + 0, (uint8_t *)receivedData, sizeof(receivedData), 1000);
-      |                                           ^~
-../Core/Src/main.c:118:26: warning: initializer-string for array of 'unsigned char' is too long
-  118 |      uint8_t state[10] = "DEVICE IS NOT READY\n";
-      |                          ^~~~~~~~~~~~~~~~~~~~~~~
-make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
-"make -j7 all" terminated with exit code 2. Build might be incomplete.
-14:48:59 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
-make -j7 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:110:43: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
-  110 |    if (HAL_I2C_IsDeviceReady(&hi2c1, 0x3A <<1 + 0, 2, 10) == HAL_OK) {
-      |                                           ^~
-../Core/Src/main.c:111:43: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
-  111 |      HAL_I2C_Master_Receive(&hi2c1,  0x3A <<1 + 0, (uint8_t *)receivedData, sizeof(receivedData), 1000);
-      |                                           ^~
-../Core/Src/main.c:118:26: warning: initializer-string for array of 'unsigned char' is too long
-  118 |      uint8_t state[10] = "DEVICE IS NOT READY\n";
-      |                          ^~~~~~~~~~~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: BusTracker_CM4.elf
- 
-arm-none-eabi-size   BusTracker_CM4.elf 
-arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
-   text	   data	    bss	    dec	    hex	filename
-  16360	     20	   1932	  18312	   4788	BusTracker_CM4.elf
-Finished building: default.size.stdout
- 
-Finished building: BusTracker_CM4.list
- 
-15:03:27 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
-make -j7 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:110:43: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
-  110 |    if (HAL_I2C_IsDeviceReady(&hi2c1, 0x3A <<1 + 0, 2, 10) == HAL_OK) {
-      |                                           ^~
-../Core/Src/main.c:111:43: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
-  111 |      HAL_I2C_Master_Receive(&hi2c1,  0x3A <<1 + 0, (uint8_t *)receivedData, sizeof(receivedData), 1000);
-      |                                           ^~
-../Core/Src/main.c:118:26: warning: initializer-string for array of 'unsigned char' is too long
-  118 |      uint8_t state[10] = "DEVICE IS NOT READY\n";
-      |                          ^~~~~~~~~~~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: BusTracker_CM4.elf
- 
-arm-none-eabi-size   BusTracker_CM4.elf 
-arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
-   text	   data	    bss	    dec	    hex	filename
-  16360	     20	   1932	  18312	   4788	BusTracker_CM4.elf
-Finished building: default.size.stdout
- 
-Finished building: BusTracker_CM4.list
- 
-15:05:19 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
-make -j7 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:110:43: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
-  110 |    if (HAL_I2C_IsDeviceReady(&hi2c1, 0x3A <<1 + 0, 2, 10) == HAL_OK) {
-      |                                           ^~
-../Core/Src/main.c:111:43: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
-  111 |      HAL_I2C_Master_Receive(&hi2c1,  0x3A <<1 + 0, (uint8_t *)receivedData, sizeof(receivedData), 1000);
-      |                                           ^~
-../Core/Src/main.c:118:26: warning: initializer-string for array of 'unsigned char' is too long
-  118 |      uint8_t state[10] = "DEVICE IS NOT READY\n";
-      |                          ^~~~~~~~~~~~~~~~~~~~~~~
-../Core/Src/main.c:121:6: warning: implicit declaration of function 'HAL_DELAY' [-Wimplicit-function-declaration]
-  121 |      HAL_DELAY(200);
-      |      ^~~~~~~~~
-arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.macos64_1.0.0.202111181127/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld: ./Core/Src/main.o: in function `main':
-/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/Debug/../Core/Src/main.c:121: undefined reference to `HAL_DELAY'
-collect2: error: ld returned 1 exit status
-make: *** [makefile:65: BusTracker_CM4.elf] Error 1
-"make -j7 all" terminated with exit code 2. Build might be incomplete.
-15:05:32 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
-make -j7 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:110:43: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
-  110 |    if (HAL_I2C_IsDeviceReady(&hi2c1, 0x3A <<1 + 0, 2, 10) == HAL_OK) {
-      |                                           ^~
-../Core/Src/main.c:111:43: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
-  111 |      HAL_I2C_Master_Receive(&hi2c1,  0x3A <<1 + 0, (uint8_t *)receivedData, sizeof(receivedData), 1000);
-      |                                           ^~
-../Core/Src/main.c:118:26: warning: initializer-string for array of 'unsigned char' is too long
-  118 |      uint8_t state[10] = "DEVICE IS NOT READY\n";
-      |                          ^~~~~~~~~~~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: BusTracker_CM4.elf
- 
-arm-none-eabi-size   BusTracker_CM4.elf 
-arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
-   text	   data	    bss	    dec	    hex	filename
-  16448	     20	   1932	  18400	   47e0	BusTracker_CM4.elf
-Finished building: default.size.stdout
- 
-Finished building: BusTracker_CM4.list
- 
-15:05:55 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+12:25:52 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
 make -j7 all 
 arm-none-eabi-size   BusTracker_CM4.elf 
    text	   data	    bss	    dec	    hex	filename
-  16448	     20	   1932	  18400	   47e0	BusTracker_CM4.elf
+  18720	    120	   1808	  20648	   50a8	BusTracker_CM4.elf
 Finished building: default.size.stdout
  
-15:07:23 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+12:27:28 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
 make -j7 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:110:43: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
-  110 |    if (HAL_I2C_IsDeviceReady(&hi2c1, 0x3A <<1 + 0, 2, 10) == HAL_OK) {
-      |                                           ^~
-../Core/Src/main.c:111:43: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
-  111 |      HAL_I2C_Master_Receive(&hi2c1,  0x3A <<1 + 0, (uint8_t *)receivedData, sizeof(receivedData), 1000);
-      |                                           ^~
-../Core/Src/main.c:116:26: warning: initializer-string for array of 'unsigned char' is too long
-  116 |      uint8_t state[10] = "DEVICE IS NOT READY\n";
-      |                          ^~~~~~~~~~~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: BusTracker_CM4.elf
- 
-arm-none-eabi-size   BusTracker_CM4.elf 
-arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
-   text	   data	    bss	    dec	    hex	filename
-  16404	     20	   1932	  18356	   47b4	BusTracker_CM4.elf
-Finished building: default.size.stdout
- 
-Finished building: BusTracker_CM4.list
- 
-15:08:06 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
-make -j7 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:110:43: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
-  110 |    if (HAL_I2C_IsDeviceReady(&hi2c1, 0x3A <<1 + 0, 2, 10) == HAL_OK) {
-      |                                           ^~
-../Core/Src/main.c:111:43: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
-  111 |      HAL_I2C_Master_Receive(&hi2c1,  0x3A <<1 + 0, (uint8_t *)receivedData, sizeof(receivedData), 1000);
-      |                                           ^~
-../Core/Src/main.c:118:26: warning: initializer-string for array of 'unsigned char' is too long
-  118 |      uint8_t state[10] = "DEVICE IS NOT READY\n";
-      |                          ^~~~~~~~~~~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: BusTracker_CM4.elf
- 
-arm-none-eabi-size   BusTracker_CM4.elf 
-arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
-   text	   data	    bss	    dec	    hex	filename
-  16448	     20	   1932	  18400	   47e0	BusTracker_CM4.elf
-Finished building: default.size.stdout
- 
-Finished building: BusTracker_CM4.list
- 
-15:08:29 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
-make -j7 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:110:43: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
-  110 |    if (HAL_I2C_IsDeviceReady(&hi2c1, 0x3A <<1 + 0, 2, 10) == HAL_OK) {
-      |                                           ^~
-../Core/Src/main.c:111:43: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
-  111 |      HAL_I2C_Master_Receive(&hi2c1,  0x3A <<1 + 0, (uint8_t *)receivedData, sizeof(receivedData), 1000);
-      |                                           ^~
-../Core/Src/main.c:116:26: warning: initializer-string for array of 'unsigned char' is too long
-  116 |      uint8_t state[10] = "DEVICE IS NOT READY\n";
-      |                          ^~~~~~~~~~~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: BusTracker_CM4.elf
- 
-arm-none-eabi-size   BusTracker_CM4.elf 
-arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
-   text	   data	    bss	    dec	    hex	filename
-  16404	     20	   1932	  18356	   47b4	BusTracker_CM4.elf
-Finished building: default.size.stdout
- 
-Finished building: BusTracker_CM4.list
- 
-15:08:49 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
-make -j7 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:110:43: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
-  110 |    if (HAL_I2C_IsDeviceReady(&hi2c1, 0x3A <<1 + 0, 2, 10) == HAL_OK) {
-      |                                           ^~
-../Core/Src/main.c:111:43: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
-  111 |      HAL_I2C_Master_Receive(&hi2c1,  0x3A <<1 + 0, (uint8_t *)receivedData, sizeof(receivedData), 1000);
-      |                                           ^~
-../Core/Src/main.c:118:26: warning: initializer-string for array of 'unsigned char' is too long
-  118 |      uint8_t state[10] = "DEVICE IS NOT READY\n";
-      |                          ^~~~~~~~~~~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: BusTracker_CM4.elf
- 
-arm-none-eabi-size   BusTracker_CM4.elf 
-arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
-   text	   data	    bss	    dec	    hex	filename
-  16448	     20	   1932	  18400	   47e0	BusTracker_CM4.elf
-Finished building: default.size.stdout
- 
-Finished building: BusTracker_CM4.list
- 
-15:09:07 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
-make -j7 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:110:43: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
-  110 |    if (HAL_I2C_IsDeviceReady(&hi2c1, 0x3A <<1 + 0, 2, 10) == HAL_OK) {
-      |                                           ^~
-../Core/Src/main.c:111:43: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
-  111 |      HAL_I2C_Master_Receive(&hi2c1,  0x3A <<1 + 0, (uint8_t *)receivedData, sizeof(receivedData), 1000);
-      |                                           ^~
-../Core/Src/main.c:118:26: warning: initializer-string for array of 'unsigned char' is too long
-  118 |      uint8_t state[10] = "DEVICE IS NOT READY\n";
-      |                          ^~~~~~~~~~~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: BusTracker_CM4.elf
- 
-arm-none-eabi-size   BusTracker_CM4.elf 
-arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
-   text	   data	    bss	    dec	    hex	filename
-  16448	     20	   1932	  18400	   47e0	BusTracker_CM4.elf
-Finished building: default.size.stdout
- 
-Finished building: BusTracker_CM4.list
- 
-15:10:02 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
-make -j7 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:110:43: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
-  110 |    if (HAL_I2C_IsDeviceReady(&hi2c1, 0x3A <<1 + 0, 2, 10) == HAL_OK) {
-      |                                           ^~
-../Core/Src/main.c:111:43: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
-  111 |      HAL_I2C_Master_Receive(&hi2c1,  0x3A <<1 + 0, (uint8_t *)receivedData, sizeof(receivedData), 1000);
-      |                                           ^~
-../Core/Src/main.c:118:26: warning: initializer-string for array of 'unsigned char' is too long
-  118 |      uint8_t state[10] = "DEVICE IS NOT READY\n";
-      |                          ^~~~~~~~~~~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: BusTracker_CM4.elf
- 
-arm-none-eabi-size   BusTracker_CM4.elf 
-arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
-   text	   data	    bss	    dec	    hex	filename
-  16404	     20	   1932	  18356	   47b4	BusTracker_CM4.elf
-Finished building: default.size.stdout
- 
-Finished building: BusTracker_CM4.list
- 
-10:45:56 **** Build of configuration Debug for project BusTracker_CM4 ****
-make -j7 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c:50:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
-   50 | static const uint8_t REG_DATA = 0x00;
-      |                      ^~~~~~~~
-arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: BusTracker_CM4.elf
- 
-arm-none-eabi-size   BusTracker_CM4.elf 
-arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
-   text	   data	    bss	    dec	    hex	filename
-  19020	    120	   1952	  21092	   5264	BusTracker_CM4.elf
-Finished building: default.size.stdout
- 
-Finished building: BusTracker_CM4.list
- 
-10:49:44 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
-make -j7 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c:50:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
-   50 | static const uint8_t REG_DATA = 0x00;
-      |                      ^~~~~~~~
-arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: BusTracker_CM4.elf
- 
-arm-none-eabi-size   BusTracker_CM4.elf 
-arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
-   text	   data	    bss	    dec	    hex	filename
-  19080	    120	   1952	  21152	   52a0	BusTracker_CM4.elf
-Finished building: default.size.stdout
- 
-Finished building: BusTracker_CM4.list
- 
-10:55:41 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
-make -j7 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:126:23: warning: initializer-string for array of 'unsigned char' is too long
-  126 |    uint8_t test[10] = "Received: \n";
-      |                       ^~~~~~~~~~~~~~
+../Core/Src/main.c:85:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
+   85 |   const char* desiredNMEA = "$GPGGA";
+      |               ^~~~~~~~~~~
 At top level:
-../Core/Src/main.c:50:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
-   50 | static const uint8_t REG_DATA = 0x00;
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
       |                      ^~~~~~~~
 arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: BusTracker_CM4.elf
@@ -470,28 +65,21 @@ Finished building target: BusTracker_CM4.elf
 arm-none-eabi-size   BusTracker_CM4.elf 
 arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
    text	   data	    bss	    dec	    hex	filename
-  19096	    120	   1952	  21168	   52b0	BusTracker_CM4.elf
+  18712	    120	   1808	  20640	   50a0	BusTracker_CM4.elf
 Finished building: default.size.stdout
  
 Finished building: BusTracker_CM4.list
  
-10:56:31 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+12:28:19 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
 make -j7 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:126:23: warning: initializer-string for array of 'unsigned char' is too long
-  126 |    uint8_t test[10] = "Received: \n";
-      |                       ^~~~~~~~~~~~~~
-../Core/Src/main.c:123:30: warning: ' 
-   ' directive writing 3 bytes into a region of size between 1 and 100 [-Wformat-overflow=]
-  123 |      sprintf((char*)buff, "%s \r\n", (char*)receivedData);
-      |                              ^~~~~
-../Core/Src/main.c:123:6: note: 'sprintf' output between 4 and 103 bytes into a destination of size 100
-  123 |      sprintf((char*)buff, "%s \r\n", (char*)receivedData);
-      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:85:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
+   85 |   const char* desiredNMEA = "$GPGGA";
+      |               ^~~~~~~~~~~
 At top level:
-../Core/Src/main.c:50:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
-   50 | static const uint8_t REG_DATA = 0x00;
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
       |                      ^~~~~~~~
 arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: BusTracker_CM4.elf
@@ -499,25 +87,21 @@ Finished building target: BusTracker_CM4.elf
 arm-none-eabi-size   BusTracker_CM4.elf 
 arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
    text	   data	    bss	    dec	    hex	filename
-  19100	    120	   1952	  21172	   52b4	BusTracker_CM4.elf
+  18708	    120	   1808	  20636	   509c	BusTracker_CM4.elf
 Finished building: default.size.stdout
  
 Finished building: BusTracker_CM4.list
  
-10:57:01 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+12:29:21 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
 make -j7 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:123:30: warning: ' 
-   ' directive writing 3 bytes into a region of size between 1 and 100 [-Wformat-overflow=]
-  123 |      sprintf((char*)buff, "%s \r\n", (char*)receivedData);
-      |                              ^~~~~
-../Core/Src/main.c:123:6: note: 'sprintf' output between 4 and 103 bytes into a destination of size 100
-  123 |      sprintf((char*)buff, "%s \r\n", (char*)receivedData);
-      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:85:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
+   85 |   const char* desiredNMEA = "$GPGGA";
+      |               ^~~~~~~~~~~
 At top level:
-../Core/Src/main.c:50:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
-   50 | static const uint8_t REG_DATA = 0x00;
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
       |                      ^~~~~~~~
 arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: BusTracker_CM4.elf
@@ -525,84 +109,1088 @@ Finished building target: BusTracker_CM4.elf
 arm-none-eabi-size   BusTracker_CM4.elf 
 arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
    text	   data	    bss	    dec	    hex	filename
-  19032	    120	   1952	  21104	   5270	BusTracker_CM4.elf
+  18704	    120	   1808	  20632	   5098	BusTracker_CM4.elf
 Finished building: default.size.stdout
  
 Finished building: BusTracker_CM4.list
  
-10:58:32 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+12:30:55 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
 make -j7 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:130:15: warning: pointer targets in passing argument 1 of 'strstr' differ in signedness [-Wpointer-sign]
+../Core/Src/main.c:85:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
+   85 |   const char* desiredNMEA = "$GPGGA";
+      |               ^~~~~~~~~~~
+At top level:
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
+      |                      ^~~~~~~~
 arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-  130 |    if (strstr(buff, desiredNMEA) != NULL) {
-      |               ^~~~
-      |               |
-      |               uint8_t * {aka unsigned char *}
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  18704	    120	   1808	  20632	   5098	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+12:32:39 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:85:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
+   85 |   const char* desiredNMEA = "$GPGGA";
+      |               ^~~~~~~~~~~
+At top level:
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
+      |                      ^~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  18704	    120	   1808	  20632	   5098	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+12:34:44 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+../Core/Src/main.c: In function 'main':
+Finished building target: BusTracker_CM4.elf
+ 
+../Core/Src/main.c:85:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  18704	    120	   1808	  20632	   5098	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+   85 |   const char* desiredNMEA = "$GPGGA";
+      |               ^~~~~~~~~~~
+At top level:
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
+      |                      ^~~~~~~~
+Finished building: BusTracker_CM4.list
+ 
+12:37:02 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:85:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
+   85 |   const char* desiredNMEA = "$GPGGA";
+      |               ^~~~~~~~~~~
+At top level:
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
+      |                      ^~~~~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  18712	    120	   1808	  20640	   50a0	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+12:37:51 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:85:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
+   85 |   const char* desiredNMEA = "$GPGGA";
+      |               ^~~~~~~~~~~
+At top level:
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
+      |                      ^~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  18740	    120	   1808	  20668	   50bc	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+12:38:28 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:85:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
+   85 |   const char* desiredNMEA = "$GPGGA";
+      |               ^~~~~~~~~~~
+At top level:
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
+      |                      ^~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  18712	    120	   1808	  20640	   50a0	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+12:38:35 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-size   BusTracker_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18712	    120	   1808	  20640	   50a0	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+12:38:46 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-size   BusTracker_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18712	    120	   1808	  20640	   50a0	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+12:41:15 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:87:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
+   87 |   const char* desiredNMEA = "$GPGGA";
+      |               ^~~~~~~~~~~
+../Core/Src/main.c:132:29: warning: '%s' directive writing up to 74 bytes into a region of size between 26 and 100 [-Wformat-overflow=]
+  132 |     sprintf((char*)buff, "%s%s", (char*)data1, (char*)data2);
+      |                             ^~                        ~~~~~
+../Core/Src/main.c:132:5: note: 'sprintf' output between 1 and 149 bytes into a destination of size 100
+  132 |     sprintf((char*)buff, "%s%s", (char*)data1, (char*)data2);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+At top level:
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
+      |                      ^~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  18760	    120	   1808	  20688	   50d0	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+12:42:20 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:125:30: warning: too many arguments for format [-Wformat-extra-args]
+  125 |        sprintf((char*)data1, "data1\n", (char*)receivedData);
+      |                              ^~~~~~~~~
+../Core/Src/main.c:127:30: warning: too many arguments for format [-Wformat-extra-args]
+  127 |        sprintf((char*)data2, "data2\n", (char*)receivedData);
+      |                              ^~~~~~~~~
+../Core/Src/main.c:87:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
+   87 |   const char* desiredNMEA = "$GPGGA";
+      |               ^~~~~~~~~~~
+../Core/Src/main.c:132:30: warning: '%s' directive writing up to 74 bytes into a region of size between 26 and 100 [-Wformat-overflow=]
+  132 |      sprintf((char*)buff, "%s%s", (char*)data1, (char*)data2);
+      |                              ^~                        ~~~~~
+../Core/Src/main.c:132:6: note: 'sprintf' output between 1 and 149 bytes into a destination of size 100
+  132 |      sprintf((char*)buff, "%s%s", (char*)data1, (char*)data2);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+At top level:
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
+      |                      ^~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  18776	    120	   1808	  20704	   50e0	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+12:43:11 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-size   BusTracker_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18776	    120	   1808	  20704	   50e0	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+12:43:24 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:87:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
+   87 |   const char* desiredNMEA = "$GPGGA";
+      |               ^~~~~~~~~~~
+../Core/Src/main.c:127:35: warning: 'sprintf' may write a terminating nul past the end of the destination [-Wformat-overflow=]
+  127 |        sprintf((char*)data2, "%s\n", (char*)receivedData);
+      |                                   ^
+../Core/Src/main.c:127:8: note: 'sprintf' output between 2 and 76 bytes into a destination of size 75
+  127 |        sprintf((char*)data2, "%s\n", (char*)receivedData);
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:125:35: warning: 'sprintf' may write a terminating nul past the end of the destination [-Wformat-overflow=]
+  125 |        sprintf((char*)data1, "%s\n", (char*)receivedData);
+      |                                   ^
+../Core/Src/main.c:125:8: note: 'sprintf' output between 2 and 76 bytes into a destination of size 75
+  125 |        sprintf((char*)data1, "%s\n", (char*)receivedData);
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:132:30: warning: '%s' directive writing up to 74 bytes into a region of size between 26 and 100 [-Wformat-overflow=]
+  132 |      sprintf((char*)buff, "%s%s", (char*)data1, (char*)data2);
+      |                              ^~                        ~~~~~
+../Core/Src/main.c:132:6: note: 'sprintf' output between 1 and 149 bytes into a destination of size 100
+  132 |      sprintf((char*)buff, "%s%s", (char*)data1, (char*)data2);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+At top level:
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
+      |                      ^~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  18760	    120	   1808	  20688	   50d0	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+12:46:06 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:87:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
+   87 |   const char* desiredNMEA = "$GPGGA";
+      |               ^~~~~~~~~~~
+../Core/Src/main.c:132:30: warning: '%s' directive writing up to 74 bytes into a region of size between 26 and 100 [-Wformat-overflow=]
+  132 |      sprintf((char*)buff, "%s%s\r\n", (char*)data1, (char*)data2);
+      |                              ^~                            ~~~~~
+../Core/Src/main.c:132:6: note: 'sprintf' output between 3 and 151 bytes into a destination of size 100
+  132 |      sprintf((char*)buff, "%s%s\r\n", (char*)data1, (char*)data2);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+At top level:
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
+      |                      ^~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  18760	    120	   1808	  20688	   50d0	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+12:46:38 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:87:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
+   87 |   const char* desiredNMEA = "$GPGGA";
+      |               ^~~~~~~~~~~
+../Core/Src/main.c:132:30: warning: '%s' directive writing up to 74 bytes into a region of size between 26 and 100 [-Wformat-overflow=]
+  132 |      sprintf((char*)buff, "%s%s\r", (char*)data1, (char*)data2);
+      |                              ^~                          ~~~~~
+../Core/Src/main.c:132:6: note: 'sprintf' output between 2 and 150 bytes into a destination of size 100
+  132 |      sprintf((char*)buff, "%s%s\r", (char*)data1, (char*)data2);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+At top level:
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
+      |                      ^~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  18760	    120	   1808	  20688	   50d0	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+12:49:01 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:134:16: warning: pointer targets in passing argument 1 of 'strstr' differ in signedness [-Wpointer-sign]
+  134 |     if (strstr(buff, desiredNMEA) != NULL) {
+      |                ^~~~
+      |                |
+      |                uint8_t * {aka unsigned char *}
 In file included from ../Core/Src/main.c:25:
 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.macos64_1.0.0.202111181127/tools/arm-none-eabi/include/string.h:48:16: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
    48 | char  *strstr (const char *, const char *);
       |                ^~~~~~~~~~~~
-../Core/Src/main.c:126:30: warning: ' 
-   ' directive writing 3 bytes into a region of size between 1 and 100 [-Wformat-overflow=]
-  126 |      sprintf((char*)buff, "%s \r\n", (char*)receivedData);
-      |                              ^~~~~
-../Core/Src/main.c:126:6: note: 'sprintf' output between 4 and 103 bytes into a destination of size 100
-  126 |      sprintf((char*)buff, "%s \r\n", (char*)receivedData);
-      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:132:30: warning: '%s' directive writing up to 74 bytes into a region of size between 26 and 100 [-Wformat-overflow=]
+  132 |      sprintf((char*)buff, "%s%s\r", (char*)data1, (char*)data2);
+      |                              ^~                          ~~~~~
+../Core/Src/main.c:132:6: note: 'sprintf' output between 2 and 150 bytes into a destination of size 100
+  132 |      sprintf((char*)buff, "%s%s\r", (char*)data1, (char*)data2);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 At top level:
-../Core/Src/main.c:50:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
-   50 | static const uint8_t REG_DATA = 0x00;
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
       |                      ^~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: BusTracker_CM4.elf
  
 arm-none-eabi-size   BusTracker_CM4.elf 
 arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
    text	   data	    bss	    dec	    hex	filename
-  19112	    120	   1952	  21184	   52c0	BusTracker_CM4.elf
+  18820	    120	   1808	  20748	   510c	BusTracker_CM4.elf
 Finished building: default.size.stdout
  
 Finished building: BusTracker_CM4.list
  
-10:59:50 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+12:49:47 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
 make -j7 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 ../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:130:15: warning: pointer targets in passing argument 1 of 'strstr' differ in signedness [-Wpointer-sign]
-Finished building target: BusTracker_CM4.elf
-  130 |    if (strstr(buff, desiredNMEA) != NULL) {
-      |               ^~~~
-      |               |
-      |               uint8_t * {aka unsigned char *}
+../Core/Src/main.c:134:16: warning: pointer targets in passing argument 1 of 'strstr' differ in signedness [-Wpointer-sign]
+  134 |     if (strstr(buff, desiredNMEA) != NULL) {
+      |                ^~~~
+      |                |
+      |                uint8_t * {aka unsigned char *}
 In file included from ../Core/Src/main.c:25:
 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.macos64_1.0.0.202111181127/tools/arm-none-eabi/include/string.h:48:16: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   48 | char  *strstr (const char *, const char *);
+      |                ^~~~~~~~~~~~
+../Core/Src/main.c:132:30: warning: '%s' directive writing up to 74 bytes into a region of size between 26 and 100 [-Wformat-overflow=]
+  132 |      sprintf((char*)buff, "%s%s\r", (char*)data1, (char*)data2);
+      |                              ^~                          ~~~~~
+../Core/Src/main.c:132:6: note: 'sprintf' output between 2 and 150 bytes into a destination of size 100
+  132 |      sprintf((char*)buff, "%s%s\r", (char*)data1, (char*)data2);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+At top level:
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
+      |                      ^~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
  
 arm-none-eabi-size   BusTracker_CM4.elf 
 arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  18740	    120	   1808	  20668	   50bc	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+12:50:20 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:134:16: warning: pointer targets in passing argument 1 of 'strstr' differ in signedness [-Wpointer-sign]
+  134 |     if (strstr(buff, desiredNMEA) != NULL) {
+      |                ^~~~
+      |                |
+      |                uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:25:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.macos64_1.0.0.202111181127/tools/arm-none-eabi/include/string.h:48:16: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   48 | char  *strstr (const char *, const char *);
+      |                ^~~~~~~~~~~~
+../Core/Src/main.c:132:30: warning: '%s' directive writing up to 74 bytes into a region of size between 26 and 100 [-Wformat-overflow=]
+  132 |      sprintf((char*)buff, "%s%s\r", (char*)data1, (char*)data2);
+      |                              ^~                          ~~~~~
+../Core/Src/main.c:132:6: note: 'sprintf' output between 2 and 150 bytes into a destination of size 100
+  132 |      sprintf((char*)buff, "%s%s\r", (char*)data1, (char*)data2);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+At top level:
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
+      |                      ^~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  18820	    120	   1808	  20748	   510c	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+12:50:40 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:134:16: warning: pointer targets in passing argument 1 of 'strstr' differ in signedness [-Wpointer-sign]
+  134 |     if (strstr(buff, desiredNMEA) == NULL) {
+      |                ^~~~
+      |                |
+      |                uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:25:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.macos64_1.0.0.202111181127/tools/arm-none-eabi/include/string.h:48:16: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   48 | char  *strstr (const char *, const char *);
+      |                ^~~~~~~~~~~~
+../Core/Src/main.c:132:30: warning: '%s' directive writing up to 74 bytes into a region of size between 26 and 100 [-Wformat-overflow=]
+  132 |      sprintf((char*)buff, "%s%s\r", (char*)data1, (char*)data2);
+      |                              ^~                          ~~~~~
+../Core/Src/main.c:132:6: note: 'sprintf' output between 2 and 150 bytes into a destination of size 100
+  132 |      sprintf((char*)buff, "%s%s\r", (char*)data1, (char*)data2);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+At top level:
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
+      |                      ^~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  18820	    120	   1808	  20748	   510c	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+12:53:20 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:134:16: warning: pointer targets in passing argument 1 of 'strstr' differ in signedness [-Wpointer-sign]
+  134 |     if (strstr(buff, desiredNMEA) != NULL) {
+      |                ^~~~
+      |                |
+      |                uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:25:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.macos64_1.0.0.202111181127/tools/arm-none-eabi/include/string.h:48:16: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   48 | char  *strstr (const char *, const char *);
+      |                ^~~~~~~~~~~~
+../Core/Src/main.c:132:30: warning: '%s' directive writing up to 74 bytes into a region of size between 26 and 100 [-Wformat-overflow=]
+  132 |      sprintf((char*)buff, "%s%s\r", (char*)data1, (char*)data2);
+      |                              ^~                          ~~~~~
+../Core/Src/main.c:132:6: note: 'sprintf' output between 2 and 150 bytes into a destination of size 100
+  132 |      sprintf((char*)buff, "%s%s\r", (char*)data1, (char*)data2);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+At top level:
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
+      |                      ^~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  18820	    120	   1808	  20748	   510c	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+12:55:35 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:87:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
+   87 |   const char* desiredNMEA = "$GPGGA";
+      |               ^~~~~~~~~~~
+../Core/Src/main.c:84:11: warning: unused variable 'data2' [-Wunused-variable]
+   84 |   uint8_t data2[75];
+      |           ^~~~~
+../Core/Src/main.c:83:11: warning: unused variable 'data1' [-Wunused-variable]
+   83 |   uint8_t data1[75];
+      |           ^~~~~
+At top level:
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
+      |                      ^~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  18704	    120	   1808	  20632	   5098	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+12:57:30 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:87:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
+   87 |   const char* desiredNMEA = "$GPGGA";
+      |               ^~~~~~~~~~~
+../Core/Src/main.c:84:11: warning: unused variable 'data2' [-Wunused-variable]
+   84 |   uint8_t data2[75];
+      |           ^~~~~
+../Core/Src/main.c:83:11: warning: unused variable 'data1' [-Wunused-variable]
+   83 |   uint8_t data1[75];
+      |           ^~~~~
+At top level:
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
+      |                      ^~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  18716	    120	   1808	  20644	   50a4	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+12:58:17 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:87:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
+   87 |   const char* desiredNMEA = "$GPGGA";
+      |               ^~~~~~~~~~~
+../Core/Src/main.c:84:11: warning: unused variable 'data2' [-Wunused-variable]
+   84 |   uint8_t data2[75];
+      |           ^~~~~
+../Core/Src/main.c:83:11: warning: unused variable 'data1' [-Wunused-variable]
+   83 |   uint8_t data1[75];
+      |           ^~~~~
+../Core/Src/main.c:124:55: warning: '
+-END RECEIVED DATA-
+   ' directive writing 21 bytes into a region of size between 3 and 77 [-Wformat-overflow=]
+  124 |       sprintf((char*)buff, "-START RECEIVED DATA-\n %s\n-END RECEIVED DATA-\n", (char*)receivedData);
+      |                                                       ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:124:7: note: 'sprintf' output between 45 and 119 bytes into a destination of size 100
+  124 |       sprintf((char*)buff, "-START RECEIVED DATA-\n %s\n-END RECEIVED DATA-\n", (char*)receivedData);
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+At top level:
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
+      |                      ^~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  18748	    120	   1808	  20676	   50c4	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+12:58:46 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:87:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
+   87 |   const char* desiredNMEA = "$GPGGA";
+      |               ^~~~~~~~~~~
+../Core/Src/main.c:84:11: warning: unused variable 'data2' [-Wunused-variable]
+   84 |   uint8_t data2[75];
+      |           ^~~~~
+../Core/Src/main.c:83:11: warning: unused variable 'data1' [-Wunused-variable]
+   83 |   uint8_t data1[75];
+      |           ^~~~~
+../Core/Src/main.c:124:55: warning: '
+-END RECEIVED DATA-
+
+   ' directive writing 22 bytes into a region of size between 3 and 77 [-Wformat-overflow=]
+  124 |       sprintf((char*)buff, "-START RECEIVED DATA-\n %s\n-END RECEIVED DATA-\n\n", (char*)receivedData);
+      |                                                       ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:124:7: note: 'sprintf' output between 46 and 120 bytes into a destination of size 100
+  124 |       sprintf((char*)buff, "-START RECEIVED DATA-\n %s\n-END RECEIVED DATA-\n\n", (char*)receivedData);
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+At top level:
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
+      |                      ^~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  18748	    120	   1808	  20676	   50c4	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+12:59:01 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:87:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
+   87 |   const char* desiredNMEA = "$GPGGA";
+      |               ^~~~~~~~~~~
+../Core/Src/main.c:84:11: warning: unused variable 'data2' [-Wunused-variable]
+   84 |   uint8_t data2[75];
+      |           ^~~~~
+../Core/Src/main.c:83:11: warning: unused variable 'data1' [-Wunused-variable]
+   83 |   uint8_t data1[75];
+      |           ^~~~~
+../Core/Src/main.c:124:55: warning: '
+-END RECEIVED DATA-
+
+
+   ' directive writing 23 bytes into a region of size between 3 and 77 [-Wformat-overflow=]
+  124 |       sprintf((char*)buff, "-START RECEIVED DATA-\n %s\n-END RECEIVED DATA-\n\n\n", (char*)receivedData);
+      |                                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:124:7: note: 'sprintf' output between 47 and 121 bytes into a destination of size 100
+  124 |       sprintf((char*)buff, "-START RECEIVED DATA-\n %s\n-END RECEIVED DATA-\n\n\n", (char*)receivedData);
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+At top level:
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
+      |                      ^~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  18752	    120	   1808	  20680	   50c8	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+12:59:28 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:87:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
+   87 |   const char* desiredNMEA = "$GPGGA";
+      |               ^~~~~~~~~~~
+../Core/Src/main.c:84:11: warning: unused variable 'data2' [-Wunused-variable]
+   84 |   uint8_t data2[75];
+      |           ^~~~~
+../Core/Src/main.c:83:11: warning: unused variable 'data1' [-Wunused-variable]
+   83 |   uint8_t data1[75];
+      |           ^~~~~
+../Core/Src/main.c:124:55: warning: '
+-END RECEIVED DATA-
+   ' directive writing 22 bytes into a region of size between 3 and 77 [-Wformat-overflow=]
+  124 |       sprintf((char*)buff, "-START RECEIVED DATA-\n %s\n-END RECEIVED DATA-\r\n", (char*)receivedData);
+      |                                                       ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:124:7: note: 'sprintf' output between 46 and 120 bytes into a destination of size 100
+  124 |       sprintf((char*)buff, "-START RECEIVED DATA-\n %s\n-END RECEIVED DATA-\r\n", (char*)receivedData);
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+At top level:
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
+      |                      ^~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  18748	    120	   1808	  20676	   50c4	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+12:59:57 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:87:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
+   87 |   const char* desiredNMEA = "$GPGGA";
+      |               ^~~~~~~~~~~
+../Core/Src/main.c:84:11: warning: unused variable 'data2' [-Wunused-variable]
+   84 |   uint8_t data2[75];
+      |           ^~~~~
+../Core/Src/main.c:83:11: warning: unused variable 'data1' [-Wunused-variable]
+   83 |   uint8_t data1[75];
+      |           ^~~~~
+../Core/Src/main.c:124:57: warning: '
+-END RECEIVED DATA-
+   ' directive writing 22 bytes into a region of size between 2 and 76 [-Wformat-overflow=]
+  124 |       sprintf((char*)buff, "\n-START RECEIVED DATA-\n %s\n-END RECEIVED DATA-\r\n", (char*)receivedData);
+      |                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:124:7: note: 'sprintf' output between 47 and 121 bytes into a destination of size 100
+  124 |       sprintf((char*)buff, "\n-START RECEIVED DATA-\n %s\n-END RECEIVED DATA-\r\n", (char*)receivedData);
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+At top level:
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
+      |                      ^~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  18752	    120	   1808	  20680	   50c8	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+14:19:21 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:87:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
+   87 |   const char* desiredNMEA = "$GPGGA";
+      |               ^~~~~~~~~~~
+../Core/Src/main.c:133:29: warning: '%s' directive writing up to 74 bytes into a region of size between 26 and 100 [-Wformat-overflow=]
+  133 |     sprintf((char*)buff, "%s%s", (char*)data1, (char*)data2);
+      |                             ^~                        ~~~~~
+../Core/Src/main.c:133:5: note: 'sprintf' output between 1 and 149 bytes into a destination of size 100
+  133 |     sprintf((char*)buff, "%s%s", (char*)data1, (char*)data2);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+At top level:
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
+      |                      ^~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  18760	    120	   1808	  20688	   50d0	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+14:19:58 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:87:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
+   87 |   const char* desiredNMEA = "$GPGGA";
+      |               ^~~~~~~~~~~
+../Core/Src/main.c:133:30: warning: '%s' directive writing up to 74 bytes into a region of size between 25 and 99 [-Wformat-overflow=]
+  133 |     sprintf((char*)buff, "%s %s", (char*)data1, (char*)data2);
+      |                              ^~                        ~~~~~
+../Core/Src/main.c:133:5: note: 'sprintf' output between 2 and 150 bytes into a destination of size 100
+  133 |     sprintf((char*)buff, "%s %s", (char*)data1, (char*)data2);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+At top level:
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
+      |                      ^~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  18760	    120	   1808	  20688	   50d0	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+14:20:06 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-size   BusTracker_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18760	    120	   1808	  20688	   50d0	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+14:29:08 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:135:16: warning: pointer targets in passing argument 1 of 'strstr' differ in signedness [-Wpointer-sign]
+  135 |     if (strstr(buff, desiredNMEA) != NULL) {
+      |                ^~~~
+      |                |
+      |                uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:25:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.macos64_1.0.0.202111181127/tools/arm-none-eabi/include/string.h:48:16: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   48 | char  *strstr (const char *, const char *);
+      |                ^~~~~~~~~~~~
+../Core/Src/main.c:133:30: warning: '%s' directive writing up to 74 bytes into a region of size between 25 and 99 [-Wformat-overflow=]
+  133 |     sprintf((char*)buff, "%s %s", (char*)data1, (char*)data2);
+      |                              ^~                        ~~~~~
+../Core/Src/main.c:133:5: note: 'sprintf' output between 2 and 150 bytes into a destination of size 100
+  133 |     sprintf((char*)buff, "%s %s", (char*)data1, (char*)data2);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+At top level:
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
+      |                      ^~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  18820	    120	   1808	  20748	   510c	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+14:32:17 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:200:13: error: invalid storage class for function 'MX_I2C1_Init'
+  200 | static void MX_I2C1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:248:13: error: invalid storage class for function 'MX_USART2_UART_Init'
+  248 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:296:13: error: invalid storage class for function 'MX_GPIO_Init'
+  296 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:323:1: error: expected declaration or statement at end of input
+  323 | }
+      | ^
+../Core/Src/main.c:87:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
+   87 |   const char* desiredNMEA = "$GPGGA";
+      |               ^~~~~~~~~~~
+../Core/Src/main.c:84:11: warning: unused variable 'data2' [-Wunused-variable]
+   84 |   uint8_t data2[75];
+      |           ^~~~~
+../Core/Src/main.c:83:11: warning: unused variable 'data1' [-Wunused-variable]
+   83 |   uint8_t data1[75];
+      |           ^~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:54:13: warning: 'MX_GPIO_Init' used but never defined
+   54 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:55:13: warning: 'MX_USART2_UART_Init' used but never defined
+   55 | static void MX_USART2_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:56:13: warning: 'MX_I2C1_Init' used but never defined
+   56 | static void MX_I2C1_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:124:57: warning: '
+-END RECEIVED DATA-
+   ' directive writing 22 bytes into a region of size between 2 and 76 [-Wformat-overflow=]
+  124 |       sprintf((char*)buff, "\n-START RECEIVED DATA-\n %s\n-END RECEIVED DATA-\r\n", (char*)receivedData);
+      |                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:124:7: note: 'sprintf' output between 47 and 121 bytes into a destination of size 100
+  124 |       sprintf((char*)buff, "\n-START RECEIVED DATA-\n %s\n-END RECEIVED DATA-\r\n", (char*)receivedData);
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+At top level:
+../Core/Src/main.c:314:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  314 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:296:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+  296 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:248:13: warning: 'MX_USART2_UART_Init' defined but not used [-Wunused-function]
+  248 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:200:13: warning: 'MX_I2C1_Init' defined but not used [-Wunused-function]
+  200 | static void MX_I2C1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:150:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
+  150 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
+      |                      ^~~~~~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+14:32:49 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:200:13: error: invalid storage class for function 'MX_I2C1_Init'
+  200 | static void MX_I2C1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:248:13: error: invalid storage class for function 'MX_USART2_UART_Init'
+  248 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:296:13: error: invalid storage class for function 'MX_GPIO_Init'
+  296 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:323:1: error: expected declaration or statement at end of input
+  323 | }
+      | ^
+../Core/Src/main.c:87:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
+   87 |   const char* desiredNMEA = "$GPGGA";
+      |               ^~~~~~~~~~~
+../Core/Src/main.c:84:11: warning: unused variable 'data2' [-Wunused-variable]
+   84 |   uint8_t data2[75];
+      |           ^~~~~
+../Core/Src/main.c:83:11: warning: unused variable 'data1' [-Wunused-variable]
+   83 |   uint8_t data1[75];
+      |           ^~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:54:13: warning: 'MX_GPIO_Init' used but never defined
+   54 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:55:13: warning: 'MX_USART2_UART_Init' used but never defined
+   55 | static void MX_USART2_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:56:13: warning: 'MX_I2C1_Init' used but never defined
+   56 | static void MX_I2C1_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:124:57: warning: '
+-END RECEIVED DATA-
+   ' directive writing 22 bytes into a region of size between 2 and 76 [-Wformat-overflow=]
+  124 |       sprintf((char*)buff, "\n-START RECEIVED DATA-\n %s\n-END RECEIVED DATA-\r\n", (char*)receivedData);
+      |                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:124:7: note: 'sprintf' output between 47 and 121 bytes into a destination of size 100
+  124 |       sprintf((char*)buff, "\n-START RECEIVED DATA-\n %s\n-END RECEIVED DATA-\r\n", (char*)receivedData);
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+At top level:
+../Core/Src/main.c:314:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  314 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:296:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+  296 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:248:13: warning: 'MX_USART2_UART_Init' defined but not used [-Wunused-function]
+  248 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:200:13: warning: 'MX_I2C1_Init' defined but not used [-Wunused-function]
+  200 | static void MX_I2C1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:150:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
+  150 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
+      |                      ^~~~~~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+14:32:59 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:135:16: warning: pointer targets in passing argument 1 of 'strstr' differ in signedness [-Wpointer-sign]
+  135 |     if (strstr(buff, desiredNMEA) != NULL) {
+      |                ^~~~
+      |                |
+      |                uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:25:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.macos64_1.0.0.202111181127/tools/arm-none-eabi/include/string.h:48:16: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   48 | char  *strstr (const char *, const char *);
+      |                ^~~~~~~~~~~~
+../Core/Src/main.c:133:30: warning: '%s' directive writing up to 74 bytes into a region of size between 25 and 99 [-Wformat-overflow=]
+  133 |     sprintf((char*)buff, "%s %s", (char*)data1, (char*)data2);
+      |                              ^~                        ~~~~~
+../Core/Src/main.c:133:5: note: 'sprintf' output between 2 and 150 bytes into a destination of size 100
+  133 |     sprintf((char*)buff, "%s %s", (char*)data1, (char*)data2);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+At top level:
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
+      |                      ^~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  18820	    120	   1808	  20748	   510c	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+14:34:33 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:135:16: warning: pointer targets in passing argument 1 of 'strstr' differ in signedness [-Wpointer-sign]
+  135 |     if (strstr(buff, desiredNMEA) != NULL) {
+      |                ^~~~
+      |                |
+      |                uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:25:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.macos64_1.0.0.202111181127/tools/arm-none-eabi/include/string.h:48:16: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   48 | char  *strstr (const char *, const char *);
+      |                ^~~~~~~~~~~~
+../Core/Src/main.c:128:38: warning: '%s' directive writing up to 74 bytes into a region of size 68 [-Wformat-overflow=]
+  128 |        sprintf((char*)data2, "data2: %s", (char*)receivedData);
+      |                                      ^~          ~~~~~~~~~~~~
+../Core/Src/main.c:128:8: note: 'sprintf' output between 8 and 82 bytes into a destination of size 75
+  128 |        sprintf((char*)data2, "data2: %s", (char*)receivedData);
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:126:38: warning: '%s' directive writing up to 74 bytes into a region of size 68 [-Wformat-overflow=]
+  126 |        sprintf((char*)data1, "data1: %s", (char*)receivedData);
+      |                                      ^~          ~~~~~~~~~~~~
+../Core/Src/main.c:126:8: note: 'sprintf' output between 8 and 82 bytes into a destination of size 75
+  126 |        sprintf((char*)data1, "data1: %s", (char*)receivedData);
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:133:30: warning: '%s' directive writing up to 74 bytes into a region of size between 25 and 99 [-Wformat-overflow=]
+  133 |     sprintf((char*)buff, "%s %s\n", (char*)data1, (char*)data2);
+      |                              ^~                          ~~~~~
+../Core/Src/main.c:133:5: note: 'sprintf' output between 3 and 151 bytes into a destination of size 100
+  133 |     sprintf((char*)buff, "%s %s\n", (char*)data1, (char*)data2);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+At top level:
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
+      |                      ^~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  18844	    120	   1808	  20772	   5124	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+14:36:32 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:135:16: warning: pointer targets in passing argument 1 of 'strstr' differ in signedness [-Wpointer-sign]
+  135 |     if (strstr(buff, desiredNMEA) != NULL) {
+      |                ^~~~
+      |                |
+      |                uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:25:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.macos64_1.0.0.202111181127/tools/arm-none-eabi/include/string.h:48:16: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   48 | char  *strstr (const char *, const char *);
+      |                ^~~~~~~~~~~~
+../Core/Src/main.c:84:11: warning: unused variable 'data2' [-Wunused-variable]
+   84 |   uint8_t data2[75];
+      |           ^~~~~
+../Core/Src/main.c:83:11: warning: unused variable 'data1' [-Wunused-variable]
+   83 |   uint8_t data1[75];
+      |           ^~~~~
+At top level:
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
+      |                      ^~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  18764	    120	   1808	  20692	   50d4	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+14:51:00 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:134:16: warning: pointer targets in passing argument 1 of 'strstr' differ in signedness [-Wpointer-sign]
+  134 |     if (strstr(buff, desiredNMEA) != NULL) {
+      |                ^~~~
+      |                |
+      |                uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:25:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.macos64_1.0.0.202111181127/tools/arm-none-eabi/include/string.h:48:16: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
    48 | char  *strstr (const char *, const char *);
       |                ^~~~~~~~~~~~
 At top level:
-   text	   data	    bss	    dec	    hex	filename
-  19112	    120	   1952	  21184	   52c0	BusTracker_CM4.elf
-Finished building: default.size.stdout
-../Core/Src/main.c:50:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
-   50 | static const uint8_t REG_DATA = 0x00;
-      |                      ^~~~~~~~
- 
-Finished building: BusTracker_CM4.list
- 
-11:00:47 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
-make -j7 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:87:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
-   87 |   const char* desiredNMEA = "$GPGGA";
-      |               ^~~~~~~~~~~
-At top level:
-../Core/Src/main.c:50:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
-   50 | static const uint8_t REG_DATA = 0x00;
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
       |                      ^~~~~~~~
 arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: BusTracker_CM4.elf
@@ -610,21 +1198,33 @@ Finished building target: BusTracker_CM4.elf
 arm-none-eabi-size   BusTracker_CM4.elf 
 arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
    text	   data	    bss	    dec	    hex	filename
-  19068	    120	   1952	  21140	   5294	BusTracker_CM4.elf
+  18792	    120	   1808	  20720	   50f0	BusTracker_CM4.elf
 Finished building: default.size.stdout
  
 Finished building: BusTracker_CM4.list
  
-11:01:36 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+14:51:27 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
 make -j7 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:87:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
-   87 |   const char* desiredNMEA = "$GPGGA";
-      |               ^~~~~~~~~~~
+../Core/Src/main.c:134:16: warning: pointer targets in passing argument 1 of 'strstr' differ in signedness [-Wpointer-sign]
+  134 |     if (strstr(buff, desiredNMEA) != NULL) {
+      |                ^~~~
+      |                |
+      |                uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:25:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.macos64_1.0.0.202111181127/tools/arm-none-eabi/include/string.h:48:16: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   48 | char  *strstr (const char *, const char *);
+      |                ^~~~~~~~~~~~
+../Core/Src/main.c:132:30: warning: '%s' directive writing up to 74 bytes into a region of size between 25 and 99 [-Wformat-overflow=]
+  132 |     sprintf((char*)buff, "%s %s\n", (char*)data1, (char*)data2);
+      |                              ^~                          ~~~~~
+../Core/Src/main.c:132:5: note: 'sprintf' output between 3 and 151 bytes into a destination of size 100
+  132 |     sprintf((char*)buff, "%s %s\n", (char*)data1, (char*)data2);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 At top level:
-../Core/Src/main.c:50:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
-   50 | static const uint8_t REG_DATA = 0x00;
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
       |                      ^~~~~~~~
 arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: BusTracker_CM4.elf
@@ -632,21 +1232,33 @@ Finished building target: BusTracker_CM4.elf
 arm-none-eabi-size   BusTracker_CM4.elf 
 arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
    text	   data	    bss	    dec	    hex	filename
-  19064	    120	   1952	  21136	   5290	BusTracker_CM4.elf
+  18820	    120	   1808	  20748	   510c	BusTracker_CM4.elf
 Finished building: default.size.stdout
  
 Finished building: BusTracker_CM4.list
  
-11:01:51 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+14:51:39 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
 make -j7 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:87:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
-   87 |   const char* desiredNMEA = "$GPGGA";
-      |               ^~~~~~~~~~~
+../Core/Src/main.c:134:16: warning: pointer targets in passing argument 1 of 'strstr' differ in signedness [-Wpointer-sign]
+  134 |     if (strstr(buff, desiredNMEA) != NULL) {
+      |                ^~~~
+      |                |
+      |                uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:25:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.macos64_1.0.0.202111181127/tools/arm-none-eabi/include/string.h:48:16: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   48 | char  *strstr (const char *, const char *);
+      |                ^~~~~~~~~~~~
+../Core/Src/main.c:132:29: warning: '%s' directive writing up to 74 bytes into a region of size between 26 and 100 [-Wformat-overflow=]
+  132 |     sprintf((char*)buff, "%s%s\n", (char*)data1, (char*)data2);
+      |                             ^~                          ~~~~~
+../Core/Src/main.c:132:5: note: 'sprintf' output between 2 and 150 bytes into a destination of size 100
+  132 |     sprintf((char*)buff, "%s%s\n", (char*)data1, (char*)data2);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 At top level:
-../Core/Src/main.c:50:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
-   50 | static const uint8_t REG_DATA = 0x00;
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
       |                      ^~~~~~~~
 arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: BusTracker_CM4.elf
@@ -654,21 +1266,33 @@ Finished building target: BusTracker_CM4.elf
 arm-none-eabi-size   BusTracker_CM4.elf 
 arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
    text	   data	    bss	    dec	    hex	filename
-  19060	    120	   1952	  21132	   528c	BusTracker_CM4.elf
+  18820	    120	   1808	  20748	   510c	BusTracker_CM4.elf
 Finished building: default.size.stdout
  
 Finished building: BusTracker_CM4.list
  
-11:04:26 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+14:52:33 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
 make -j7 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:87:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
-   87 |   const char* desiredNMEA = "$GPGGA";
-      |               ^~~~~~~~~~~
+../Core/Src/main.c:134:16: warning: pointer targets in passing argument 1 of 'strstr' differ in signedness [-Wpointer-sign]
+  134 |     if (strstr(buff, desiredNMEA) != NULL) {
+      |                ^~~~
+      |                |
+      |                uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:25:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.macos64_1.0.0.202111181127/tools/arm-none-eabi/include/string.h:48:16: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   48 | char  *strstr (const char *, const char *);
+      |                ^~~~~~~~~~~~
+../Core/Src/main.c:132:30: warning: '%s' directive writing up to 74 bytes into a region of size between 25 and 99 [-Wformat-overflow=]
+  132 |     sprintf((char*)buff, "%s %s ENDDATA\n", (char*)data1, (char*)data2);
+      |                              ^~                                  ~~~~~
+../Core/Src/main.c:132:5: note: 'sprintf' output between 11 and 159 bytes into a destination of size 100
+  132 |     sprintf((char*)buff, "%s %s ENDDATA\n", (char*)data1, (char*)data2);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 At top level:
-../Core/Src/main.c:50:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
-   50 | static const uint8_t REG_DATA = 0x00;
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
       |                      ^~~~~~~~
 arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: BusTracker_CM4.elf
@@ -676,67 +1300,33 @@ Finished building target: BusTracker_CM4.elf
 arm-none-eabi-size   BusTracker_CM4.elf 
 arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
    text	   data	    bss	    dec	    hex	filename
-  19064	    120	   1952	  21136	   5290	BusTracker_CM4.elf
+  18828	    120	   1808	  20756	   5114	BusTracker_CM4.elf
 Finished building: default.size.stdout
  
 Finished building: BusTracker_CM4.list
  
-11:06:27 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+14:53:22 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
 make -j7 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:131:12: error: too many arguments to function 'HAL_UART_Transmit_IT'
-  131 |     while (HAL_UART_Transmit_IT(&huart2, buff, strlen((char*)buff), HAL_MAX_DELAY) != HAL_OK);
-      |            ^~~~~~~~~~~~~~~~~~~~
-In file included from ../Core/Inc/stm32wlxx_hal_conf.h:305,
-                 from ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/main.c:20:
-../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_uart.h:1618:19: note: declared here
- 1618 | HAL_StatusTypeDef HAL_UART_Transmit_IT(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size);
-      |                   ^~~~~~~~~~~~~~~~~~~~
-../Core/Src/main.c:87:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
-   87 |   const char* desiredNMEA = "$GPGGA";
-      |               ^~~~~~~~~~~
+../Core/Src/main.c:134:16: warning: pointer targets in passing argument 1 of 'strstr' differ in signedness [-Wpointer-sign]
+  134 |     if (strstr(buff, desiredNMEA) != NULL) {
+      |                ^~~~
+      |                |
+      |                uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:25:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.macos64_1.0.0.202111181127/tools/arm-none-eabi/include/string.h:48:16: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   48 | char  *strstr (const char *, const char *);
+      |                ^~~~~~~~~~~~
+../Core/Src/main.c:132:41: warning: '%s' directive writing up to 74 bytes into a region of size between 14 and 88 [-Wformat-overflow=]
+  132 |     sprintf((char*)buff, "STARTDATA> %s %s <ENDDATA\n", (char*)data1, (char*)data2);
+      |                                         ^~                                   ~~~~~
+../Core/Src/main.c:132:5: note: 'sprintf' output between 23 and 171 bytes into a destination of size 100
+  132 |     sprintf((char*)buff, "STARTDATA> %s %s <ENDDATA\n", (char*)data1, (char*)data2);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 At top level:
-../Core/Src/main.c:50:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
-   50 | static const uint8_t REG_DATA = 0x00;
-      |                      ^~~~~~~~
-make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
-"make -j7 all" terminated with exit code 2. Build might be incomplete.
-11:06:41 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
-make -j7 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:131:85: error: expected expression before '!=' token
-  131 |     while (HAL_UART_Transmit_IT(&huart2, buff, strlen((char*)buff)), HAL_MAX_DELAY) != HAL_OK);
-      |                                                                                     ^~
-../Core/Src/main.c:131:5: warning: this 'while' clause does not guard... [-Wmisleading-indentation]
-  131 |     while (HAL_UART_Transmit_IT(&huart2, buff, strlen((char*)buff)), HAL_MAX_DELAY) != HAL_OK);
-      |     ^~~~~
-../Core/Src/main.c:131:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'while'
-  131 |     while (HAL_UART_Transmit_IT(&huart2, buff, strlen((char*)buff)), HAL_MAX_DELAY) != HAL_OK);
-      |                                                                                              ^
-../Core/Src/main.c:131:94: error: expected statement before ')' token
-../Core/Src/main.c:87:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
-   87 |   const char* desiredNMEA = "$GPGGA";
-      |               ^~~~~~~~~~~
-At top level:
-../Core/Src/main.c:50:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
-   50 | static const uint8_t REG_DATA = 0x00;
-      |                      ^~~~~~~~
-make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
-"make -j7 all" terminated with exit code 2. Build might be incomplete.
-11:08:06 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
-make -j7 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:87:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
-   87 |   const char* desiredNMEA = "$GPGGA";
-      |               ^~~~~~~~~~~
-At top level:
-../Core/Src/main.c:50:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
-   50 | static const uint8_t REG_DATA = 0x00;
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
       |                      ^~~~~~~~
 arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: BusTracker_CM4.elf
@@ -744,21 +1334,27 @@ Finished building target: BusTracker_CM4.elf
 arm-none-eabi-size   BusTracker_CM4.elf 
 arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
    text	   data	    bss	    dec	    hex	filename
-  19924	    120	   1952	  21996	   55ec	BusTracker_CM4.elf
+  18840	    120	   1808	  20768	   5120	BusTracker_CM4.elf
 Finished building: default.size.stdout
  
 Finished building: BusTracker_CM4.list
  
-11:08:24 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+14:54:01 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
 make -j7 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
 ../Core/Src/main.c:87:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
    87 |   const char* desiredNMEA = "$GPGGA";
       |               ^~~~~~~~~~~
+../Core/Src/main.c:132:41: warning: '%s' directive writing up to 74 bytes into a region of size between 14 and 88 [-Wformat-overflow=]
+  132 |     sprintf((char*)buff, "STARTDATA> %s %s <ENDDATA\n", (char*)data1, (char*)data2);
+      |                                         ^~                                   ~~~~~
+../Core/Src/main.c:132:5: note: 'sprintf' output between 23 and 171 bytes into a destination of size 100
+  132 |     sprintf((char*)buff, "STARTDATA> %s %s <ENDDATA\n", (char*)data1, (char*)data2);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 At top level:
-../Core/Src/main.c:50:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
-   50 | static const uint8_t REG_DATA = 0x00;
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
       |                      ^~~~~~~~
 arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: BusTracker_CM4.elf
@@ -766,86 +1362,27 @@ Finished building target: BusTracker_CM4.elf
 arm-none-eabi-size   BusTracker_CM4.elf 
 arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
    text	   data	    bss	    dec	    hex	filename
-  19924	    120	   1952	  21996	   55ec	BusTracker_CM4.elf
+  18780	    120	   1808	  20708	   50e4	BusTracker_CM4.elf
 Finished building: default.size.stdout
  
 Finished building: BusTracker_CM4.list
  
-11:08:52 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
-make -j7 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:131:61: error: expected ';' before 'HAL_Delay'
-  131 |     HAL_UART_Transmit_IT(&huart2, buff, strlen((char*)buff))
-      |                                                             ^
-      |                                                             ;
-  132 |     HAL_Delay(500);
-      |     ~~~~~~~~~                                                
-../Core/Src/main.c:87:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
-   87 |   const char* desiredNMEA = "$GPGGA";
-      |               ^~~~~~~~~~~
-At top level:
-../Core/Src/main.c:50:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
-   50 | static const uint8_t REG_DATA = 0x00;
-      |                      ^~~~~~~~
-make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
-"make -j7 all" terminated with exit code 2. Build might be incomplete.
-11:09:00 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
-make -j7 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:131:60: error: expected ')' before ';' token
-  131 |     HAL_UART_Transmit_IT(&huart2, buff, strlen((char*)buff);
-      |                                                            ^
-      |                                                            )
-../Core/Src/main.c:132:20: error: expected ';' before '}' token
-  132 |     HAL_Delay(500);
-      |                    ^
-      |                    ;
-......
-  150 |   }
-      |   ~                 
-../Core/Src/main.c:87:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
-   87 |   const char* desiredNMEA = "$GPGGA";
-      |               ^~~~~~~~~~~
-At top level:
-../Core/Src/main.c:50:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
-   50 | static const uint8_t REG_DATA = 0x00;
-      |                      ^~~~~~~~
-make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
-"make -j7 all" terminated with exit code 2. Build might be incomplete.
-11:09:11 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
-make -j7 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:87:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
-   87 |   const char* desiredNMEA = "$GPGGA";
-      |               ^~~~~~~~~~~
-At top level:
-../Core/Src/main.c:50:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
-   50 | static const uint8_t REG_DATA = 0x00;
-      |                      ^~~~~~~~
-Finished building target: BusTracker_CM4.elf
- 
-arm-none-eabi-size   BusTracker_CM4.elf 
-arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
-   text	   data	    bss	    dec	    hex	filename
-  19916	    120	   1952	  21988	   55e4	BusTracker_CM4.elf
-Finished building: default.size.stdout
- 
-Finished building: BusTracker_CM4.list
- 
-11:09:36 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+14:54:22 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
 make -j7 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
 ../Core/Src/main.c:87:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
    87 |   const char* desiredNMEA = "$GPGGA";
       |               ^~~~~~~~~~~
+../Core/Src/main.c:132:40: warning: '%s' directive writing up to 74 bytes into a region of size between 15 and 89 [-Wformat-overflow=]
+  132 |     sprintf((char*)buff, "STARTDATA %s %s ENDDATA\n", (char*)data1, (char*)data2);
+      |                                        ^~                                  ~~~~~
+../Core/Src/main.c:132:5: note: 'sprintf' output between 21 and 169 bytes into a destination of size 100
+  132 |     sprintf((char*)buff, "STARTDATA %s %s ENDDATA\n", (char*)data1, (char*)data2);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 At top level:
-../Core/Src/main.c:50:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
-   50 | static const uint8_t REG_DATA = 0x00;
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
       |                      ^~~~~~~~
 arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: BusTracker_CM4.elf
@@ -853,21 +1390,27 @@ Finished building target: BusTracker_CM4.elf
 arm-none-eabi-size   BusTracker_CM4.elf 
 arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
    text	   data	    bss	    dec	    hex	filename
-  19916	    120	   1952	  21988	   55e4	BusTracker_CM4.elf
+  18780	    120	   1808	  20708	   50e4	BusTracker_CM4.elf
 Finished building: default.size.stdout
  
 Finished building: BusTracker_CM4.list
  
-11:09:56 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+14:54:40 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
 make -j7 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
 ../Core/Src/main.c:87:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
    87 |   const char* desiredNMEA = "$GPGGA";
       |               ^~~~~~~~~~~
+../Core/Src/main.c:132:30: warning: '%s' directive writing up to 74 bytes into a region of size between 25 and 99 [-Wformat-overflow=]
+  132 |     sprintf((char*)buff, "%s %s\n", (char*)data1, (char*)data2);
+      |                              ^~                          ~~~~~
+../Core/Src/main.c:132:5: note: 'sprintf' output between 3 and 151 bytes into a destination of size 100
+  132 |     sprintf((char*)buff, "%s %s\n", (char*)data1, (char*)data2);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 At top level:
-../Core/Src/main.c:50:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
-   50 | static const uint8_t REG_DATA = 0x00;
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
       |                      ^~~~~~~~
 arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: BusTracker_CM4.elf
@@ -875,21 +1418,40 @@ Finished building target: BusTracker_CM4.elf
 arm-none-eabi-size   BusTracker_CM4.elf 
 arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
    text	   data	    bss	    dec	    hex	filename
-  19064	    120	   1952	  21136	   5290	BusTracker_CM4.elf
+  18760	    120	   1808	  20688	   50d0	BusTracker_CM4.elf
 Finished building: default.size.stdout
  
 Finished building: BusTracker_CM4.list
  
-11:10:14 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+14:55:02 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-size   BusTracker_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18760	    120	   1808	  20688	   50d0	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+14:55:31 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
 make -j7 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:87:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
-   87 |   const char* desiredNMEA = "$GPGGA";
-      |               ^~~~~~~~~~~
+../Core/Src/main.c:134:16: warning: pointer targets in passing argument 1 of 'strstr' differ in signedness [-Wpointer-sign]
+  134 |     if (strstr(buff, desiredNMEA) != NULL) {
+      |                ^~~~
+      |                |
+      |                uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:25:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.macos64_1.0.0.202111181127/tools/arm-none-eabi/include/string.h:48:16: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   48 | char  *strstr (const char *, const char *);
+      |                ^~~~~~~~~~~~
+../Core/Src/main.c:132:30: warning: '%s' directive writing up to 74 bytes into a region of size between 25 and 99 [-Wformat-overflow=]
+  132 |     sprintf((char*)buff, "%s %s\n", (char*)data1, (char*)data2);
+      |                              ^~                          ~~~~~
+../Core/Src/main.c:132:5: note: 'sprintf' output between 3 and 151 bytes into a destination of size 100
+  132 |     sprintf((char*)buff, "%s %s\n", (char*)data1, (char*)data2);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 At top level:
-../Core/Src/main.c:50:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
-   50 | static const uint8_t REG_DATA = 0x00;
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
       |                      ^~~~~~~~
 arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: BusTracker_CM4.elf
@@ -897,7 +1459,103 @@ Finished building target: BusTracker_CM4.elf
 arm-none-eabi-size   BusTracker_CM4.elf 
 arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
    text	   data	    bss	    dec	    hex	filename
-  19064	    120	   1952	  21136	   5290	BusTracker_CM4.elf
+  18820	    120	   1808	  20748	   510c	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+14:58:15 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:135:16: warning: pointer targets in passing argument 1 of 'strstr' differ in signedness [-Wpointer-sign]
+  135 |     if (strstr(buff, desiredNMEA) != NULL) {
+      |                ^~~~
+      |                |
+      |                uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:25:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.macos64_1.0.0.202111181127/tools/arm-none-eabi/include/string.h:48:16: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   48 | char  *strstr (const char *, const char *);
+      |                ^~~~~~~~~~~~
+../Core/Src/main.c:84:11: warning: unused variable 'data2' [-Wunused-variable]
+   84 |   uint8_t data2[75];
+      |           ^~~~~
+../Core/Src/main.c:83:11: warning: unused variable 'data1' [-Wunused-variable]
+   83 |   uint8_t data1[75];
+      |           ^~~~~
+At top level:
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
+      |                      ^~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  18764	    120	   1808	  20692	   50d4	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+14:59:04 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:87:15: warning: unused variable 'desiredNMEA' [-Wunused-variable]
+   87 |   const char* desiredNMEA = "$GPGGA";
+      |               ^~~~~~~~~~~
+../Core/Src/main.c:84:11: warning: unused variable 'data2' [-Wunused-variable]
+   84 |   uint8_t data2[75];
+      |           ^~~~~
+../Core/Src/main.c:83:11: warning: unused variable 'data1' [-Wunused-variable]
+   83 |   uint8_t data1[75];
+      |           ^~~~~
+At top level:
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
+      |                      ^~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  18728	    120	   1808	  20656	   50b0	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+14:59:59 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:134:16: warning: pointer targets in passing argument 1 of 'strstr' differ in signedness [-Wpointer-sign]
+  134 |     if (strstr(buff, desiredNMEA) != NULL) {
+      |                ^~~~
+      |                |
+      |                uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:25:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.macos64_1.0.0.202111181127/tools/arm-none-eabi/include/string.h:48:16: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   48 | char  *strstr (const char *, const char *);
+      |                ^~~~~~~~~~~~
+../Core/Src/main.c:132:30: warning: '%s' directive writing up to 74 bytes into a region of size between 25 and 99 [-Wformat-overflow=]
+  132 |     sprintf((char*)buff, "%s %s\n", (char*)data1, (char*)data2);
+      |                              ^~                          ~~~~~
+../Core/Src/main.c:132:5: note: 'sprintf' output between 3 and 151 bytes into a destination of size 100
+  132 |     sprintf((char*)buff, "%s %s\n", (char*)data1, (char*)data2);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+At top level:
+../Core/Src/main.c:49:22: warning: 'REG_DATA' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t REG_DATA = 0x00;
+      |                      ^~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  18820	    120	   1808	  20748	   510c	BusTracker_CM4.elf
 Finished building: default.size.stdout
  
 Finished building: BusTracker_CM4.list
