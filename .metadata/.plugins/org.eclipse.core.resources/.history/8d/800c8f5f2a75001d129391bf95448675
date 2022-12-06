@@ -140,11 +140,10 @@ int main(void)
 
 		  filteredMessage[position] = '\0';
 
-		  sscanf((char*)filteredMessage, "&GPGGA,%f,%f,S,%f,E,", &time, &latitude, &longitude);
+//		  sscanf((char*)filteredMessage, "GPGGA,%f,%f,S,%f,E,", &time, &latitude, &longitude);
 
-		  char data[200];
-//		  sprintf(data, "Time: %f Lat: %f Lon: %f \r\n", time, latitude, longitude);
-//		  sprintf(data, ">START\n%s\n>END\r\n", filteredMessage);
+//		  char data[100];
+//		  sprintf(data, "%f %f %f \r\n", time, latitude, longitude);
 //		  HAL_UART_Transmit(&huart2, data, strlen((char*)data), HAL_MAX_DELAY);
 
 		  HAL_UART_Transmit(&huart2, filteredMessage, strlen((char*)filteredMessage), HAL_MAX_DELAY);

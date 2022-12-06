@@ -1,33 +1,27 @@
-11:53:07 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+13:05:06 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
 make -j7 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:134:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
-arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
-  134 |     while((char*)receivedData[position] != '\n') {
+../Core/Src/main.c:136:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  136 |     while((char*)receivedData[position] != '\n') {
       |           ^
-../Core/Src/main.c:134:41: warning: comparison between pointer and integer
-  134 |     while((char*)receivedData[position] != '\n') {
+../Core/Src/main.c:136:41: warning: comparison between pointer and integer
+  136 |     while((char*)receivedData[position] != '\n') {
       |                                         ^~
-../Core/Src/main.c:89:30: warning: unused variable 'time' [-Wunused-variable]
-   89 |   float latitude, longitude, time;
-      |                              ^~~~
-../Core/Src/main.c:89:19: warning: unused variable 'longitude' [-Wunused-variable]
-   89 |   float latitude, longitude, time;
-      |                   ^~~~~~~~~
-../Core/Src/main.c:89:9: warning: unused variable 'latitude' [-Wunused-variable]
-   89 |   float latitude, longitude, time;
-      |         ^~~~~~~~
+../Core/Src/main.c:145:10: warning: unused variable 'data' [-Wunused-variable]
+  145 |     char data[200];
+      |          ^~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: BusTracker_CM4.elf
  
 arm-none-eabi-size   BusTracker_CM4.elf 
 arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
    text	   data	    bss	    dec	    hex	filename
-  39168	    488	   1808	  41464	   a1f8	BusTracker_CM4.elf
+  41324	    488	   1808	  43620	   aa64	BusTracker_CM4.elf
 Finished building: default.size.stdout
  
 Finished building: BusTracker_CM4.list
  
 
-11:53:08 Build Finished. 0 errors, 5 warnings. (took 980ms)
+13:05:07 Build Finished. 0 errors, 3 warnings. (took 1s.10ms)
 
