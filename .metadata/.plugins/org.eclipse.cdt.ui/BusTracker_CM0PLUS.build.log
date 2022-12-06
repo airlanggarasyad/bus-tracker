@@ -1,0 +1,10 @@
+11:22:34 **** Incremental Build of configuration Debug for project BusTracker_CM0PLUS ****
+make -j7 all 
+arm-none-eabi-size   BusTracker_CM0PLUS.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2152	     20	   1572	   3744	    ea0	BusTracker_CM0PLUS.elf
+Finished building: default.size.stdout
+ 
+
+11:22:34 Build Finished. 0 errors, 0 warnings. (took 278ms)
+

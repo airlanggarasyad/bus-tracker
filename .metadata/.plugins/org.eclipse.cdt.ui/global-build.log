@@ -1,17 +1,2368 @@
-21:20:05 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+10:48:10 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
 make -j7 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:134:15: warning: character constant too long for its type
-  134 |    if(*ptr == 'GPRMC') {
-      |               ^~~~~~~
+../Core/Src/main.c:124:64: warning: pointer targets in passing argument 3 of 'HAL_I2C_Master_Receive' differ in signedness [-Wpointer-sign]
+  124 |     ret = HAL_I2C_Master_Receive(&hi2c1, TESEO_LIV3FL_ADDRESS, receivedData, sizeof(receivedData), HAL_MAX_DELAY);
+      |                                                                ^~~~~~~~~~~~
+      |                                                                |
+      |                                                                char *
+In file included from ../Core/Inc/stm32wlxx_hal_conf.h:241,
+                 from ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_i2c.h:623:97: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  623 | HAL_StatusTypeDef HAL_I2C_Master_Receive(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint8_t *pData,
+      |                                                                                        ~~~~~~~~~^~~~~
+../Core/Src/main.c:141:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  141 |     while((char*)buff[i] != '\n') {
+      |           ^
+../Core/Src/main.c:141:26: warning: comparison between pointer and integer
+  141 |     while((char*)buff[i] != '\n') {
+      |                          ^~
+../Core/Src/main.c:148:39: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  148 |     while (HAL_UART_Transmit(&huart2, filteredMessage , strlen((char*)filteredMessage), HAL_MAX_DELAY) != HAL_OK);
+      |                                       ^~~~~~~~~~~~~~~
+      |                                       |
+      |                                       char *
+In file included from ../Core/Inc/stm32wlxx_hal_conf.h:305,
+                 from ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_uart.h:1616:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1616 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:137:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  137 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:91:30: warning: unused variable 'time' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                              ^~~~
+../Core/Src/main.c:91:19: warning: unused variable 'longitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                   ^~~~~~~~~
+../Core/Src/main.c:91:9: warning: unused variable 'latitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |         ^~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex = 0;
+      |       ^~~~~~~~~~~~
 arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: BusTracker_CM4.elf
  
 arm-none-eabi-size   BusTracker_CM4.elf 
 arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
    text	   data	    bss	    dec	    hex	filename
-  38664	    488	   1808	  40960	   a000	BusTracker_CM4.elf
+  39208	    488	   1808	  41504	   a220	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+10:48:46 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:124:64: warning: pointer targets in passing argument 3 of 'HAL_I2C_Master_Receive' differ in signedness [-Wpointer-sign]
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+  124 |     ret = HAL_I2C_Master_Receive(&hi2c1, TESEO_LIV3FL_ADDRESS, receivedData, strlen((char*)receivedData), HAL_MAX_DELAY);
+      |                                                                ^~~~~~~~~~~~
+      |                                                                |
+      |                                                                char *
+In file included from ../Core/Inc/stm32wlxx_hal_conf.h:241,
+                 from ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_i2c.h:623:97: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  623 | HAL_StatusTypeDef HAL_I2C_Master_Receive(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint8_t *pData,
+      |                                                                                        ~~~~~~~~~^~~~~
+../Core/Src/main.c:131:38: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  131 |    while (HAL_UART_Transmit(&huart2, receivedData , strlen((char*)receivedData), HAL_MAX_DELAY) != HAL_OK);
+      |                                      ^~~~~~~~~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Inc/stm32wlxx_hal_conf.h:305,
+                 from ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_uart.h:1616:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1616 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:91:30: warning: unused variable 'time' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                              ^~~~
+../Core/Src/main.c:91:19: warning: unused variable 'longitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                   ^~~~~~~~~
+../Core/Src/main.c:91:9: warning: unused variable 'latitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |         ^~~~~~~~
+../Core/Src/main.c:89:14: warning: unused variable 'desiredNMEA' [-Wunused-variable]
+   89 |   const char desiredNMEA[] = "GNGSA";
+      |              ^~~~~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex = 0;
+      |       ^~~~~~~~~~~~
+../Core/Src/main.c:85:9: warning: unused variable 'ptr' [-Wunused-variable]
+   85 |   char *ptr;
+      |         ^~~
+../Core/Src/main.c:82:8: warning: unused variable 'filteredMessage' [-Wunused-variable]
+   82 |   char filteredMessage[100];
+      |        ^~~~~~~~~~~~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  39024	    488	   1808	  41320	   a168	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+10:49:24 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+../Core/Src/main.c: In function 'main':
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:124:64: warning: pointer targets in passing argument 3 of 'HAL_I2C_Master_Receive' differ in signedness [-Wpointer-sign]
+  124 |     ret = HAL_I2C_Master_Receive(&hi2c1, TESEO_LIV3FL_ADDRESS, receivedData, strlen((char*)receivedData), HAL_MAX_DELAY);
+      |                                                                ^~~~~~~~~~~~
+      |                                                                |
+      |                                                                char *
+In file included from ../Core/Inc/stm32wlxx_hal_conf.h:241,
+                 from ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_i2c.h:623:97: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  623 | HAL_StatusTypeDef HAL_I2C_Master_Receive(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint8_t *pData,
+      |                                                                                        ~~~~~~~~~^~~~~
+../Core/Src/main.c:142:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  142 |     while((char*)buff[i] != '\n') {
+      |           ^
+../Core/Src/main.c:142:26: warning: comparison between pointer and integer
+  142 |     while((char*)buff[i] != '\n') {
+      |                          ^~
+../Core/Src/main.c:149:39: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  149 |     while (HAL_UART_Transmit(&huart2, filteredMessage , strlen((char*)filteredMessage), HAL_MAX_DELAY) != HAL_OK);
+      |                                       ^~~~~~~~~~~~~~~
+      |                                       |
+      |                                       char *
+In file included from ../Core/Inc/stm32wlxx_hal_conf.h:305,
+                 from ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_uart.h:1616:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1616 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:138:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  138 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:91:30: warning: unused variable 'time' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                              ^~~~
+../Core/Src/main.c:91:19: warning: unused variable 'longitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                   ^~~~~~~~~
+../Core/Src/main.c:91:9: warning: unused variable 'latitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |         ^~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex = 0;
+      |       ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  39224	    488	   1808	  41520	   a230	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+10:49:51 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:124:64: warning: pointer targets in passing argument 3 of 'HAL_I2C_Master_Receive' differ in signedness [-Wpointer-sign]
+  124 |     ret = HAL_I2C_Master_Receive(&hi2c1, TESEO_LIV3FL_ADDRESS, receivedData, strlen((char*)receivedData), HAL_MAX_DELAY);
+      |                                                                ^~~~~~~~~~~~
+      |                                                                |
+      |                                                                char *
+In file included from ../Core/Inc/stm32wlxx_hal_conf.h:241,
+                 from ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_i2c.h:623:97: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  623 | HAL_StatusTypeDef HAL_I2C_Master_Receive(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint8_t *pData,
+      |                                                                                        ~~~~~~~~~^~~~~
+../Core/Src/main.c:142:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  142 |     while((char*)buff[i] != '\n') {
+      |           ^
+../Core/Src/main.c:142:26: warning: comparison between pointer and integer
+  142 |     while((char*)buff[i] != '\n') {
+      |                          ^~
+../Core/Src/main.c:149:39: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  149 |     while (HAL_UART_Transmit(&huart2, filteredMessage , strlen(filteredMessage), HAL_MAX_DELAY) != HAL_OK);
+      |                                       ^~~~~~~~~~~~~~~
+      |                                       |
+      |                                       char *
+In file included from ../Core/Inc/stm32wlxx_hal_conf.h:305,
+                 from ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_uart.h:1616:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1616 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:138:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  138 |     int stringLength = strlen(receivedData) - position;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:91:30: warning: unused variable 'time' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                              ^~~~
+../Core/Src/main.c:91:19: warning: unused variable 'longitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                   ^~~~~~~~~
+../Core/Src/main.c:91:9: warning: unused variable 'latitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |         ^~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex = 0;
+      |       ^~~~~~~~~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  39224	    488	   1808	  41520	   a230	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+10:50:17 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:124:64: warning: pointer targets in passing argument 3 of 'HAL_I2C_Master_Receive' differ in signedness [-Wpointer-sign]
+  124 |     ret = HAL_I2C_Master_Receive(&hi2c1, TESEO_LIV3FL_ADDRESS, receivedData, strlen((char*)receivedData), HAL_MAX_DELAY);
+      |                                                                ^~~~~~~~~~~~
+      |                                                                |
+      |                                                                char *
+In file included from ../Core/Inc/stm32wlxx_hal_conf.h:241,
+                 from ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_i2c.h:623:97: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  623 | HAL_StatusTypeDef HAL_I2C_Master_Receive(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint8_t *pData,
+      |                                                                                        ~~~~~~~~~^~~~~
+../Core/Src/main.c:142:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  142 |     while((char*)buff[i] != '\n') {
+      |           ^
+../Core/Src/main.c:142:26: warning: comparison between pointer and integer
+  142 |     while((char*)buff[i] != '\n') {
+      |                          ^~
+../Core/Src/main.c:149:39: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  149 |     while (HAL_UART_Transmit(&huart2, filteredMessage , strlen(filteredMessage), HAL_MAX_DELAY) != HAL_OK);
+      |                                       ^~~~~~~~~~~~~~~
+      |                                       |
+      |                                       char *
+In file included from ../Core/Inc/stm32wlxx_hal_conf.h:305,
+                 from ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_uart.h:1616:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1616 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:138:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  138 |     int stringLength = strlen(receivedData) - position;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:91:30: warning: unused variable 'time' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                              ^~~~
+../Core/Src/main.c:91:19: warning: unused variable 'longitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                   ^~~~~~~~~
+../Core/Src/main.c:91:9: warning: unused variable 'latitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |         ^~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex = 0;
+      |       ^~~~~~~~~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  39224	    488	   1808	  41520	   a230	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+10:51:29 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+../Core/Src/main.c:124:64: warning: pointer targets in passing argument 3 of 'HAL_I2C_Master_Receive' differ in signedness [-Wpointer-sign]
+  124 |     ret = HAL_I2C_Master_Receive(&hi2c1, TESEO_LIV3FL_ADDRESS, receivedData, strlen((char*)receivedData), HAL_MAX_DELAY);
+      |                                                                ^~~~~~~~~~~~
+      |                                                                |
+      |                                                                char *
+In file included from ../Core/Inc/stm32wlxx_hal_conf.h:241,
+                 from ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_i2c.h:623:97: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  623 | HAL_StatusTypeDef HAL_I2C_Master_Receive(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint8_t *pData,
+      |                                                                                        ~~~~~~~~~^~~~~
+../Core/Src/main.c:142:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  142 |     while((char*)buff[i] != '\n') {
+      |           ^
+../Core/Src/main.c:142:26: warning: comparison between pointer and integer
+  142 |     while((char*)buff[i] != '\n') {
+      |                          ^~
+../Core/Src/main.c:138:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  138 |     int stringLength = strlen(receivedData) - position;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:154:38: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  154 |    while (HAL_UART_Transmit(&huart2, buff , strlen(buff), HAL_MAX_DELAY) != HAL_OK);
+      |                                      ^~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Inc/stm32wlxx_hal_conf.h:305,
+                 from ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_uart.h:1616:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1616 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:91:30: warning: unused variable 'time' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                              ^~~~
+../Core/Src/main.c:91:19: warning: unused variable 'longitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                   ^~~~~~~~~
+../Core/Src/main.c:91:9: warning: unused variable 'latitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |         ^~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex = 0;
+      |       ^~~~~~~~~~~~
+../Core/Src/main.c:82:8: warning: variable 'filteredMessage' set but not used [-Wunused-but-set-variable]
+   82 |   char filteredMessage[500];
+      |        ^~~~~~~~~~~~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  39296	    488	   1808	  41592	   a278	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+10:51:49 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:124:64: warning: pointer targets in passing argument 3 of 'HAL_I2C_Master_Receive' differ in signedness [-Wpointer-sign]
+  124 |     ret = HAL_I2C_Master_Receive(&hi2c1, TESEO_LIV3FL_ADDRESS, receivedData, strlen((char*)receivedData), HAL_MAX_DELAY);
+      |                                                                ^~~~~~~~~~~~
+      |                                                                |
+      |                                                                char *
+In file included from ../Core/Inc/stm32wlxx_hal_conf.h:241,
+                 from ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_i2c.h:623:97: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  623 | HAL_StatusTypeDef HAL_I2C_Master_Receive(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint8_t *pData,
+      |                                                                                        ~~~~~~~~~^~~~~
+../Core/Src/main.c:134:31: warning: missing terminating " character
+  134 |    ptr = strstr(receivedData, "GPGGA:);
+      |                               ^
+../Core/Src/main.c:134:31: error: missing terminating " character
+  134 |    ptr = strstr(receivedData, "GPGGA:);
+      |                               ^~~~~~~~~
+../Core/Src/main.c:136:4: error: expected expression before 'if'
+  136 |    if(ptr) {
+      |    ^~
+../Core/Src/main.c:155:19: error: expected ';' before '}' token
+  155 |    HAL_Delay(500);
+      |                   ^
+      |                   ;
+......
+  160 |   }
+      |   ~                
+../Core/Src/main.c:91:30: warning: unused variable 'time' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                              ^~~~
+../Core/Src/main.c:91:19: warning: unused variable 'longitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                   ^~~~~~~~~
+../Core/Src/main.c:91:9: warning: unused variable 'latitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |         ^~~~~~~~
+../Core/Src/main.c:89:14: warning: unused variable 'desiredNMEA' [-Wunused-variable]
+   89 |   const char desiredNMEA[] = "GPGGA";
+      |              ^~~~~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex = 0;
+      |       ^~~~~~~~~~~~
+../Core/Src/main.c:85:9: warning: variable 'ptr' set but not used [-Wunused-but-set-variable]
+   85 |   char *ptr;
+      |         ^~~
+../Core/Src/main.c:82:8: warning: unused variable 'filteredMessage' [-Wunused-variable]
+   82 |   char filteredMessage[500];
+      |        ^~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+10:52:16 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:124:64: warning: pointer targets in passing argument 3 of 'HAL_I2C_Master_Receive' differ in signedness [-Wpointer-sign]
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+  124 |     ret = HAL_I2C_Master_Receive(&hi2c1, TESEO_LIV3FL_ADDRESS, receivedData, strlen((char*)receivedData), HAL_MAX_DELAY);
+      |                                                                ^~~~~~~~~~~~
+      |                                                                |
+      |                                                                char *
+In file included from ../Core/Inc/stm32wlxx_hal_conf.h:241,
+                 from ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_i2c.h:623:97: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  623 | HAL_StatusTypeDef HAL_I2C_Master_Receive(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint8_t *pData,
+      |                                                                                        ~~~~~~~~~^~~~~
+../Core/Src/main.c:142:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  142 |     while((char*)buff[i] != '\n') {
+      |           ^
+../Core/Src/main.c:142:26: warning: comparison between pointer and integer
+  142 |     while((char*)buff[i] != '\n') {
+      |                          ^~
+../Core/Src/main.c:138:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  138 |     int stringLength = strlen(receivedData) - position;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:154:38: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  154 |    while (HAL_UART_Transmit(&huart2, buff , strlen(buff), HAL_MAX_DELAY) != HAL_OK);
+      |                                      ^~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Inc/stm32wlxx_hal_conf.h:305,
+                 from ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_uart.h:1616:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1616 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:91:30: warning: unused variable 'time' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                              ^~~~
+../Core/Src/main.c:91:19: warning: unused variable 'longitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                   ^~~~~~~~~
+../Core/Src/main.c:91:9: warning: unused variable 'latitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |         ^~~~~~~~
+../Core/Src/main.c:89:14: warning: unused variable 'desiredNMEA' [-Wunused-variable]
+   89 |   const char desiredNMEA[] = "GPGGA";
+      |              ^~~~~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex = 0;
+      |       ^~~~~~~~~~~~
+../Core/Src/main.c:82:8: warning: variable 'filteredMessage' set but not used [-Wunused-but-set-variable]
+   82 |   char filteredMessage[500];
+      |        ^~~~~~~~~~~~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  39296	    488	   1808	  41592	   a278	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+10:52:40 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:124:64: warning: pointer targets in passing argument 3 of 'HAL_I2C_Master_Receive' differ in signedness [-Wpointer-sign]
+  124 |     ret = HAL_I2C_Master_Receive(&hi2c1, TESEO_LIV3FL_ADDRESS, receivedData, strlen((char*)receivedData), HAL_MAX_DELAY);
+      |                                                                ^~~~~~~~~~~~
+      |                                                                |
+      |                                                                char *
+In file included from ../Core/Inc/stm32wlxx_hal_conf.h:241,
+                 from ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_i2c.h:623:97: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  623 | HAL_StatusTypeDef HAL_I2C_Master_Receive(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint8_t *pData,
+      |                                                                                        ~~~~~~~~~^~~~~
+../Core/Src/main.c:142:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  142 |     while((char*)buff[i] != '\n') {
+      |           ^
+../Core/Src/main.c:142:26: warning: comparison between pointer and integer
+  142 |     while((char*)buff[i] != '\n') {
+      |                          ^~
+../Core/Src/main.c:138:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  138 |     int stringLength = strlen(receivedData) - position;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:154:38: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  154 |    while (HAL_UART_Transmit(&huart2, buff , strlen(buff), HAL_MAX_DELAY) != HAL_OK);
+      |                                      ^~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Inc/stm32wlxx_hal_conf.h:305,
+                 from ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_uart.h:1616:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1616 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:91:30: warning: unused variable 'time' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                              ^~~~
+../Core/Src/main.c:91:19: warning: unused variable 'longitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                   ^~~~~~~~~
+../Core/Src/main.c:91:9: warning: unused variable 'latitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |         ^~~~~~~~
+../Core/Src/main.c:89:14: warning: unused variable 'desiredNMEA' [-Wunused-variable]
+   89 |   const char desiredNMEA[] = "GPGGA";
+      |              ^~~~~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex = 0;
+      |       ^~~~~~~~~~~~
+../Core/Src/main.c:82:8: warning: variable 'filteredMessage' set but not used [-Wunused-but-set-variable]
+   82 |   char filteredMessage[500];
+      |        ^~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  39296	    488	   1808	  41592	   a278	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+10:52:59 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:124:64: warning: pointer targets in passing argument 3 of 'HAL_I2C_Master_Receive' differ in signedness [-Wpointer-sign]
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+  124 |     ret = HAL_I2C_Master_Receive(&hi2c1, TESEO_LIV3FL_ADDRESS, receivedData, strlen((char*)receivedData), HAL_MAX_DELAY);
+      |                                                                ^~~~~~~~~~~~
+      |                                                                |
+      |                                                                char *
+In file included from ../Core/Inc/stm32wlxx_hal_conf.h:241,
+                 from ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_i2c.h:623:97: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  623 | HAL_StatusTypeDef HAL_I2C_Master_Receive(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint8_t *pData,
+      |                                                                                        ~~~~~~~~~^~~~~
+../Core/Src/main.c:142:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  142 |     while((char*)buff[i] != '\n') {
+      |           ^
+../Core/Src/main.c:142:26: warning: comparison between pointer and integer
+  142 |     while((char*)buff[i] != '\n') {
+      |                          ^~
+../Core/Src/main.c:138:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  138 |     int stringLength = strlen(receivedData) - position;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:154:38: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  154 |    while (HAL_UART_Transmit(&huart2, receivedData , strlen(receivedData), HAL_MAX_DELAY) != HAL_OK);
+      |                                      ^~~~~~~~~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Inc/stm32wlxx_hal_conf.h:305,
+                 from ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_uart.h:1616:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1616 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:91:30: warning: unused variable 'time' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                              ^~~~
+../Core/Src/main.c:91:19: warning: unused variable 'longitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                   ^~~~~~~~~
+../Core/Src/main.c:91:9: warning: unused variable 'latitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |         ^~~~~~~~
+../Core/Src/main.c:89:14: warning: unused variable 'desiredNMEA' [-Wunused-variable]
+   89 |   const char desiredNMEA[] = "GPGGA";
+      |              ^~~~~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex = 0;
+      |       ^~~~~~~~~~~~
+../Core/Src/main.c:82:8: warning: variable 'filteredMessage' set but not used [-Wunused-but-set-variable]
+   82 |   char filteredMessage[500];
+      |        ^~~~~~~~~~~~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  39296	    488	   1808	  41592	   a278	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+10:53:48 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:138:31: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  138 |     int stringLength = strlen(receivedData) - position;
+      |                               ^~~~~~~~~~~~
+      |                               |
+      |                               uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:25:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.macos64_1.0.0.202111181127/tools/arm-none-eabi/include/string.h:41:17: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t  strlen (const char *);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c:142:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  142 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:142:34: warning: comparison between pointer and integer
+  142 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:138:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  138 |     int stringLength = strlen(receivedData) - position;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:154:60: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  154 |    while (HAL_UART_Transmit(&huart2, receivedData , strlen(receivedData), HAL_MAX_DELAY) != HAL_OK);
+      |                                                            ^~~~~~~~~~~~
+      |                                                            |
+      |                                                            uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:25:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.macos64_1.0.0.202111181127/tools/arm-none-eabi/include/string.h:41:17: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t  strlen (const char *);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c:91:30: warning: unused variable 'time' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                              ^~~~
+../Core/Src/main.c:91:19: warning: unused variable 'longitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                   ^~~~~~~~~
+../Core/Src/main.c:91:9: warning: unused variable 'latitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |         ^~~~~~~~
+../Core/Src/main.c:89:14: warning: unused variable 'desiredNMEA' [-Wunused-variable]
+   89 |   const char desiredNMEA[] = "GPGGA";
+      |              ^~~~~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex = 0;
+      |       ^~~~~~~~~~~~
+../Core/Src/main.c:82:11: warning: variable 'filteredMessage' set but not used [-Wunused-but-set-variable]
+   82 |   uint8_t filteredMessage[500];
+      |           ^~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  39296	    488	   1808	  41592	   a278	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+10:54:33 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:141:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+  141 |     while((char*)buff[i] != '\n') {
+      |           ^
+../Core/Src/main.c:141:26: warning: comparison between pointer and integer
+  141 |     while((char*)buff[i] != '\n') {
+      |                          ^~
+../Core/Src/main.c:137:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  137 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:91:30: warning: unused variable 'time' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                              ^~~~
+../Core/Src/main.c:91:19: warning: unused variable 'longitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                   ^~~~~~~~~
+../Core/Src/main.c:91:9: warning: unused variable 'latitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |         ^~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex = 0;
+      |       ^~~~~~~~~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  39208	    488	   1808	  41504	   a220	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+10:54:48 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:141:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  141 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:141:34: warning: comparison between pointer and integer
+  141 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:137:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  137 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:91:30: warning: unused variable 'time' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                              ^~~~
+../Core/Src/main.c:91:19: warning: unused variable 'longitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                   ^~~~~~~~~
+../Core/Src/main.c:91:9: warning: unused variable 'latitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |         ^~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex = 0;
+      |       ^~~~~~~~~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  39208	    488	   1808	  41504	   a220	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+10:55:01 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:141:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  141 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:141:34: warning: comparison between pointer and integer
+  141 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:137:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  137 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:91:30: warning: unused variable 'time' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                              ^~~~
+../Core/Src/main.c:91:19: warning: unused variable 'longitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                   ^~~~~~~~~
+../Core/Src/main.c:91:9: warning: unused variable 'latitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |         ^~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex = 0;
+      |       ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  39208	    488	   1808	  41504	   a220	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+10:55:37 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:136:24: error: invalid operands to binary - (have 'char *' and 'uint8_t *' {aka 'unsigned char *'})
+  136 |     int position = ptr - receivedData;
+      |                        ^
+      |                        |
+      |                        uint8_t * {aka unsigned char *}
+../Core/Src/main.c:141:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  141 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:141:34: warning: comparison between pointer and integer
+  141 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:137:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  137 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:91:30: warning: unused variable 'time' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                              ^~~~
+../Core/Src/main.c:91:19: warning: unused variable 'longitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                   ^~~~~~~~~
+../Core/Src/main.c:91:9: warning: unused variable 'latitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |         ^~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex;
+      |       ^~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+10:55:58 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+../Core/Src/main.c:141:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  141 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:141:34: warning: comparison between pointer and integer
+  141 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:137:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  137 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:91:30: warning: unused variable 'time' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                              ^~~~
+../Core/Src/main.c:91:19: warning: unused variable 'longitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                   ^~~~~~~~~
+../Core/Src/main.c:91:9: warning: unused variable 'latitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |         ^~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex;
+      |       ^~~~~~~~~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  39208	    488	   1808	  41504	   a220	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+10:56:52 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:139:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  139 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:139:34: warning: comparison between pointer and integer
+  139 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:135:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  135 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:91:30: warning: unused variable 'time' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                              ^~~~
+../Core/Src/main.c:91:19: warning: unused variable 'longitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                   ^~~~~~~~~
+../Core/Src/main.c:91:9: warning: unused variable 'latitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |         ^~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex;
+      |       ^~~~~~~~~~~~
+../Core/Src/main.c:82:11: warning: variable 'filteredMessage' set but not used [-Wunused-but-set-variable]
+   82 |   uint8_t filteredMessage[100];
+      |           ^~~~~~~~~~~~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  39208	    488	   1808	  41504	   a220	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+10:57:58 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:139:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  139 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:139:34: warning: comparison between pointer and integer
+  139 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:135:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  135 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:91:30: warning: unused variable 'time' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                              ^~~~
+../Core/Src/main.c:91:19: warning: unused variable 'longitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                   ^~~~~~~~~
+../Core/Src/main.c:91:9: warning: unused variable 'latitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |         ^~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex;
+      |       ^~~~~~~~~~~~
+../Core/Src/main.c:82:11: warning: variable 'filteredMessage' set but not used [-Wunused-but-set-variable]
+   82 |   uint8_t filteredMessage[100];
+      |           ^~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  39224	    488	   1808	  41520	   a230	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+10:58:32 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:142:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  142 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:142:34: warning: comparison between pointer and integer
+  142 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:138:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  138 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:91:30: warning: unused variable 'time' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                              ^~~~
+../Core/Src/main.c:91:19: warning: unused variable 'longitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                   ^~~~~~~~~
+../Core/Src/main.c:91:9: warning: unused variable 'latitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |         ^~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex;
+      |       ^~~~~~~~~~~~
+../Core/Src/main.c:82:11: warning: variable 'filteredMessage' set but not used [-Wunused-but-set-variable]
+   82 |   uint8_t filteredMessage[100];
+      |           ^~~~~~~~~~~~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  39264	    488	   1808	  41560	   a258	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+10:58:54 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:142:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  142 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:142:34: warning: comparison between pointer and integer
+  142 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:138:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  138 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:91:30: warning: unused variable 'time' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                              ^~~~
+../Core/Src/main.c:91:19: warning: unused variable 'longitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                   ^~~~~~~~~
+../Core/Src/main.c:91:9: warning: unused variable 'latitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |         ^~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex;
+      |       ^~~~~~~~~~~~
+../Core/Src/main.c:82:11: warning: variable 'filteredMessage' set but not used [-Wunused-but-set-variable]
+   82 |   uint8_t filteredMessage[100];
+      |           ^~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  39224	    488	   1808	  41520	   a230	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:00:01 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:139:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  139 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:139:34: warning: comparison between pointer and integer
+  139 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:135:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  135 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:91:30: warning: unused variable 'time' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                              ^~~~
+../Core/Src/main.c:91:19: warning: unused variable 'longitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                   ^~~~~~~~~
+../Core/Src/main.c:91:9: warning: unused variable 'latitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |         ^~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex;
+      |       ^~~~~~~~~~~~
+../Core/Src/main.c:82:11: warning: variable 'filteredMessage' set but not used [-Wunused-but-set-variable]
+   82 |   uint8_t filteredMessage[100];
+      |           ^~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  39224	    488	   1808	  41520	   a230	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:00:21 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:139:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  139 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:139:34: warning: comparison between pointer and integer
+  139 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:135:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  135 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:91:30: warning: unused variable 'time' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                              ^~~~
+../Core/Src/main.c:91:19: warning: unused variable 'longitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                   ^~~~~~~~~
+../Core/Src/main.c:91:9: warning: unused variable 'latitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |         ^~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex;
+      |       ^~~~~~~~~~~~
+../Core/Src/main.c:82:11: warning: variable 'filteredMessage' set but not used [-Wunused-but-set-variable]
+   82 |   uint8_t filteredMessage[100];
+      |           ^~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  39216	    488	   1808	  41512	   a228	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:00:39 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:139:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  139 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:139:34: warning: comparison between pointer and integer
+  139 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:135:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  135 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:91:30: warning: unused variable 'time' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                              ^~~~
+../Core/Src/main.c:91:19: warning: unused variable 'longitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                   ^~~~~~~~~
+../Core/Src/main.c:91:9: warning: unused variable 'latitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |         ^~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex;
+      |       ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  39216	    488	   1808	  41512	   a228	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:01:04 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:139:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+  139 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:139:34: warning: comparison between pointer and integer
+  139 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:135:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  135 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:91:30: warning: unused variable 'time' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                              ^~~~
+../Core/Src/main.c:91:19: warning: unused variable 'longitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |                   ^~~~~~~~~
+../Core/Src/main.c:91:9: warning: unused variable 'latitude' [-Wunused-variable]
+   91 |   float latitude, longitude, time;
+      |         ^~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex;
+      |       ^~~~~~~~~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  39200	    488	   1808	  41496	   a218	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:03:11 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:139:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+  139 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:139:34: warning: comparison between pointer and integer
+  139 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:135:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  135 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex;
+      |       ^~~~~~~~~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  41556	    488	   1808	  43852	   ab4c	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:04:29 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:139:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+  139 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:139:34: warning: comparison between pointer and integer
+  139 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:135:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  135 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex;
+      |       ^~~~~~~~~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  41556	    488	   1808	  43852	   ab4c	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:04:52 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:139:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+  139 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:139:34: warning: comparison between pointer and integer
+  139 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:135:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  135 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex;
+      |       ^~~~~~~~~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  41556	    488	   1808	  43852	   ab4c	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:05:06 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:139:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  139 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:139:34: warning: comparison between pointer and integer
+  139 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:135:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  135 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex;
+      |       ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  41556	    488	   1808	  43852	   ab4c	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:05:50 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+../Core/Src/main.c:139:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  139 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:139:34: warning: comparison between pointer and integer
+  139 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:135:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  135 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex;
+      |       ^~~~~~~~~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  41564	    488	   1808	  43860	   ab54	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:06:05 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:139:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+  139 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:139:34: warning: comparison between pointer and integer
+  139 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:135:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  135 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex;
+      |       ^~~~~~~~~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  41564	    488	   1808	  43860	   ab54	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:07:23 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:139:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  139 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:139:34: warning: comparison between pointer and integer
+  139 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:135:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  135 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex;
+      |       ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  41564	    488	   1808	  43860	   ab54	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:08:55 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:142:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  142 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:142:34: warning: comparison between pointer and integer
+  142 |     while((char*)receivedData[i] != '\n') {
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+      |                                  ^~
+../Core/Src/main.c:138:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  138 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex;
+      |       ^~~~~~~~~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  41564	    488	   1808	  43860	   ab54	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:09:54 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:142:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+  142 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:142:34: warning: comparison between pointer and integer
+  142 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:138:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  138 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex;
+      |       ^~~~~~~~~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  41548	    488	   1808	  43844	   ab44	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:10:11 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:142:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  142 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:142:34: warning: comparison between pointer and integer
+  142 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:138:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  138 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex;
+      |       ^~~~~~~~~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  41556	    488	   1808	  43852	   ab4c	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:10:41 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:142:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  142 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:142:34: warning: comparison between pointer and integer
+  142 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:138:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  138 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex;
+      |       ^~~~~~~~~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  41564	    488	   1808	  43860	   ab54	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:10:59 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:142:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  142 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:142:34: warning: comparison between pointer and integer
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+  142 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:138:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  138 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex;
+      |       ^~~~~~~~~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  41564	    488	   1808	  43860	   ab54	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:16:27 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:142:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  142 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:142:34: warning: comparison between pointer and integer
+  142 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:138:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  138 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex;
+      |       ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  41564	    488	   1808	  43860	   ab54	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:17:03 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:142:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  142 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:142:34: warning: comparison between pointer and integer
+  142 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:138:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  138 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:87:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   87 |   int messageIndex;
+      |       ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  41564	    488	   1808	  43860	   ab54	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:18:19 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:143:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  143 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:143:34: warning: comparison between pointer and integer
+  143 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:139:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  139 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:88:7: warning: unused variable 'messageIndex' [-Wunused-variable]
+   88 |   int messageIndex;
+      |       ^~~~~~~~~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  41596	    488	   1808	  43892	   ab74	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:19:16 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:140:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  140 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:140:34: warning: comparison between pointer and integer
+  140 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:156:32: error: 'bla' undeclared (first use in this function)
+  156 |     HAL_UART_Transmit(&huart2, bla, strlen((char*)bla), HAL_MAX_DELAY);
+      |                                ^~~
+../Core/Src/main.c:156:32: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:136:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  136 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+11:19:26 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:140:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  140 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:140:34: warning: comparison between pointer and integer
+  140 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:136:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  136 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  41564	    488	   1808	  43860	   ab54	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:19:47 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+../Core/Src/main.c:140:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  140 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:140:34: warning: comparison between pointer and integer
+  140 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:136:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  136 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  41700	    488	   1808	  43996	   abdc	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:20:07 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+../Core/Src/main.c:140:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  140 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:140:34: warning: comparison between pointer and integer
+  140 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:136:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  136 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  41564	    488	   1808	  43860	   ab54	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:21:05 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:140:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+  140 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:140:34: warning: comparison between pointer and integer
+  140 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:152:32: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  152 |     HAL_UART_Transmit(&huart2, data, strlen((char*)data), HAL_MAX_DELAY);
+      |                                ^~~~
+      |                                |
+      |                                char *
+In file included from ../Core/Inc/stm32wlxx_hal_conf.h:305,
+                 from ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_uart.h:1616:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1616 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:136:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  136 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  41540	    488	   1808	  43836	   ab3c	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:21:28 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:152:32: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+  152 |     HAL_UART_Transmit(&huart2, data, strlen((char*)data), HAL_MAX_DELAY);
+      |                                ^~~~
+      |                                |
+      |                                char *
+In file included from ../Core/Inc/stm32wlxx_hal_conf.h:305,
+                 from ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_uart.h:1616:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1616 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:136:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  136 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  41540	    488	   1808	  43836	   ab3c	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:21:48 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+../Core/Src/main.c:140:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  140 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:140:34: warning: comparison between pointer and integer
+  140 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:152:32: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  152 |     HAL_UART_Transmit(&huart2, data, strlen((char*)data), HAL_MAX_DELAY);
+      |                                ^~~~
+      |                                |
+      |                                char *
+In file included from ../Core/Inc/stm32wlxx_hal_conf.h:305,
+                 from ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_uart.h:1616:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1616 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:136:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  136 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  41540	    488	   1808	  43836	   ab3c	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:22:24 **** Build of configuration Debug for project BusTracker_CM0PLUS ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DCORE_CM0PLUS -DSTM32WL55xx -DUSE_HAL_DRIVER -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal.d" -MT"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal.o"
+arm-none-eabi-gcc "/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DCORE_CM0PLUS -DSTM32WL55xx -DUSE_HAL_DRIVER -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_cortex.d" -MT"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_cortex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_cortex.o"
+arm-none-eabi-gcc "/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_dma.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DCORE_CM0PLUS -DSTM32WL55xx -DUSE_HAL_DRIVER -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_dma.d" -MT"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_dma.o"
+arm-none-eabi-gcc "/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_dma_ex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DCORE_CM0PLUS -DSTM32WL55xx -DUSE_HAL_DRIVER -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_dma_ex.d" -MT"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_dma_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_dma_ex.o"
+arm-none-eabi-gcc "/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_exti.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DCORE_CM0PLUS -DSTM32WL55xx -DUSE_HAL_DRIVER -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_exti.d" -MT"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_exti.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_exti.o"
+arm-none-eabi-gcc "/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_flash.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DCORE_CM0PLUS -DSTM32WL55xx -DUSE_HAL_DRIVER -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_flash.d" -MT"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_flash.o"
+arm-none-eabi-gcc "/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_flash_ex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DCORE_CM0PLUS -DSTM32WL55xx -DUSE_HAL_DRIVER -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_flash_ex.d" -MT"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_flash_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_flash_ex.o"
+arm-none-eabi-gcc "/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_gpio.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DCORE_CM0PLUS -DSTM32WL55xx -DUSE_HAL_DRIVER -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_gpio.d" -MT"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_gpio.o"
+arm-none-eabi-gcc "/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DCORE_CM0PLUS -DSTM32WL55xx -DUSE_HAL_DRIVER -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_pwr.d" -MT"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_pwr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_pwr.o"
+arm-none-eabi-gcc "/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr_ex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DCORE_CM0PLUS -DSTM32WL55xx -DUSE_HAL_DRIVER -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_pwr_ex.d" -MT"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_pwr_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_pwr_ex.o"
+arm-none-eabi-gcc "/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DCORE_CM0PLUS -DSTM32WL55xx -DUSE_HAL_DRIVER -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_rcc.d" -MT"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_rcc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_rcc.o"
+arm-none-eabi-gcc "/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DCORE_CM0PLUS -DSTM32WL55xx -DUSE_HAL_DRIVER -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_rcc_ex.d" -MT"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_rcc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_rcc_ex.o"
+arm-none-eabi-gcc "/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DCORE_CM0PLUS -DSTM32WL55xx -DUSE_HAL_DRIVER -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_tim.d" -MT"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_tim.o"
+arm-none-eabi-gcc "/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim_ex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DCORE_CM0PLUS -DSTM32WL55xx -DUSE_HAL_DRIVER -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_tim_ex.d" -MT"Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_tim_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_tim_ex.o"
+arm-none-eabi-gcc -mcpu=cortex-m0plus -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32wl55jcix.d" -MT"Core/Startup/startup_stm32wl55jcix.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Startup/startup_stm32wl55jcix.o" "../Core/Startup/startup_stm32wl55jcix.s"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DCORE_CM0PLUS -DSTM32WL55xx -DUSE_HAL_DRIVER -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32wlxx_hal_msp.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DCORE_CM0PLUS -DSTM32WL55xx -DUSE_HAL_DRIVER -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32wlxx_hal_msp.d" -MT"Core/Src/stm32wlxx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32wlxx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32wlxx_it.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DCORE_CM0PLUS -DSTM32WL55xx -DUSE_HAL_DRIVER -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32wlxx_it.d" -MT"Core/Src/stm32wlxx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32wlxx_it.o"
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DCORE_CM0PLUS -DSTM32WL55xx -DUSE_HAL_DRIVER -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/syscalls.o"
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DCORE_CM0PLUS -DSTM32WL55xx -DUSE_HAL_DRIVER -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sysmem.o"
+arm-none-eabi-gcc "/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/Common/System/system_stm32wlxx.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DCORE_CM0PLUS -DSTM32WL55xx -DUSE_HAL_DRIVER -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Common/System/system_stm32wlxx.d" -MT"Common/System/system_stm32wlxx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Common/System/system_stm32wlxx.o"
+arm-none-eabi-gcc -o "BusTracker_CM0PLUS.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM0PLUS/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM0PLUS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM0PLUS.elf
+ 
+arm-none-eabi-size   BusTracker_CM0PLUS.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM0PLUS.elf  > "BusTracker_CM0PLUS.list"
+   text	   data	    bss	    dec	    hex	filename
+   2152	     20	   1572	   3744	    ea0	BusTracker_CM0PLUS.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM0PLUS.list
+ 
+11:22:27 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:140:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  140 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:140:34: warning: comparison between pointer and integer
+  140 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:152:32: error: 'data' undeclared (first use in this function)
+  152 |     HAL_UART_Transmit(&huart2, data, strlen((char*)data), HAL_MAX_DELAY);
+      |                                ^~~~
+../Core/Src/main.c:152:32: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:136:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  136 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+11:22:34 **** Incremental Build of configuration Debug for project BusTracker_CM0PLUS ****
+make -j7 all 
+arm-none-eabi-size   BusTracker_CM0PLUS.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2152	     20	   1572	   3744	    ea0	BusTracker_CM0PLUS.elf
+Finished building: default.size.stdout
+ 
+11:22:35 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:140:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  140 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:140:34: warning: comparison between pointer and integer
+  140 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:152:32: error: wrong type argument to unary minus
+  152 |     HAL_UART_Transmit(&huart2, -filteredMessage.812500, strlen((char*)data), HAL_MAX_DELAY);
+      |                                ^
+../Core/Src/main.c:152:48: error: expected ')' before numeric constant
+  152 |     HAL_UART_Transmit(&huart2, -filteredMessage.812500, strlen((char*)data), HAL_MAX_DELAY);
+      |                                                ^~~~~~~
+      |                                                )
+../Core/Src/main.c:152:5: error: too few arguments to function 'HAL_UART_Transmit'
+  152 |     HAL_UART_Transmit(&huart2, -filteredMessage.812500, strlen((char*)data), HAL_MAX_DELAY);
+      |     ^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/stm32wlxx_hal_conf.h:305,
+                 from ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_uart.h:1616:19: note: declared here
+ 1616 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                   ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:136:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  136 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+11:22:46 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:140:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  140 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:140:34: warning: comparison between pointer and integer
+  140 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:136:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  136 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  41436	    488	   1808	  43732	   aad4	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:23:13 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:140:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  140 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:140:34: warning: comparison between pointer and integer
+  140 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:136:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  136 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  41436	    488	   1808	  43732	   aad4	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:30:04 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:140:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  140 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:140:34: warning: comparison between pointer and integer
+  140 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:147:21: warning: statement with no effect [-Wunused-value]
+  147 |     filteredMessage +- 24;
+      |     ~~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:136:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  136 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  41436	    488	   1808	  43732	   aad4	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:30:52 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:140:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+  140 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:140:34: warning: comparison between pointer and integer
+  140 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:147:21: warning: statement with no effect [-Wunused-value]
+  147 |     filteredMessage +- 24;
+      |     ~~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:136:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  136 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  41436	    488	   1808	  43732	   aad4	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:31:02 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:140:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  140 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:140:34: warning: comparison between pointer and integer
+  140 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:147:21: error: assignment to expression with array type
+  147 |     filteredMessage += 24;
+      |                     ^~
+../Core/Src/main.c:136:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  136 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+11:32:05 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:140:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+  140 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:140:34: warning: comparison between pointer and integer
+  140 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:136:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  136 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  41436	    488	   1808	  43732	   aad4	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:32:42 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:138:31: error: 'i' undeclared (first use in this function)
+  138 |     while((char*)receivedData[i] != '\n') {
+      |                               ^
+../Core/Src/main.c:138:31: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:136:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  136 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+11:33:04 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:138:31: error: 'i' undeclared (first use in this function)
+  138 |     while((char*)receivedData[i] != '\n') {
+      |                               ^
+../Core/Src/main.c:138:31: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:136:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  136 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+11:33:15 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:138:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  138 |     while((char*)receivedData[position] != '\n') {
+      |           ^
+../Core/Src/main.c:138:41: warning: comparison between pointer and integer
+  138 |     while((char*)receivedData[position] != '\n') {
+      |                                         ^~
+../Core/Src/main.c:139:50: error: 'i' undeclared (first use in this function)
+  139 |      filteredMessage[position] = filteredMessage[i];
+      |                                                  ^
+../Core/Src/main.c:139:50: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:136:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  136 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+11:33:24 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:138:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  138 |     while((char*)receivedData[position] != '\n') {
+      |           ^
+../Core/Src/main.c:138:41: warning: comparison between pointer and integer
+  138 |     while((char*)receivedData[position] != '\n') {
+      |                                         ^~
+../Core/Src/main.c:143:21: error: 'i' undeclared (first use in this function)
+  143 |     filteredMessage[i] = '\0';
+      |                     ^
+../Core/Src/main.c:143:21: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:136:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  136 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+11:33:32 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:138:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+  138 |     while((char*)receivedData[position] != '\n') {
+      |           ^
+../Core/Src/main.c:138:41: warning: comparison between pointer and integer
+  138 |     while((char*)receivedData[position] != '\n') {
+      |                                         ^~
+../Core/Src/main.c:136:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  136 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  41228	    488	   1808	  43524	   aa04	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:34:24 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:140:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+  140 |     while((char*)receivedData[i] != '\n') {
+      |           ^
+../Core/Src/main.c:140:34: warning: comparison between pointer and integer
+  140 |     while((char*)receivedData[i] != '\n') {
+      |                                  ^~
+../Core/Src/main.c:136:9: warning: unused variable 'stringLength' [-Wunused-variable]
+  136 |     int stringLength = strlen((char*)receivedData) - position;
+      |         ^~~~~~~~~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  41436	    488	   1808	  43732	   aad4	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:35:06 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:137:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  137 |     while((char*)receivedData[position] != '\n') {
+      |           ^
+../Core/Src/main.c:137:41: warning: comparison between pointer and integer
+  137 |     while((char*)receivedData[position] != '\n') {
+      |                                         ^~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  41404	    488	   1808	  43700	   aab4	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:35:58 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+../Core/Src/main.c: In function 'main':
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:134:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+  134 |     while((char*)receivedData[position] != '\n') {
+      |           ^
+../Core/Src/main.c:134:41: warning: comparison between pointer and integer
+  134 |     while((char*)receivedData[position] != '\n') {
+      |                                         ^~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  41540	    488	   1808	  43836	   ab3c	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:36:21 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+../Core/Src/main.c:134:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  134 |     while((char*)receivedData[position] != '\n') {
+      |           ^
+../Core/Src/main.c:134:41: warning: comparison between pointer and integer
+  134 |     while((char*)receivedData[position] != '\n') {
+      |                                         ^~
+../Core/Src/main.c:146:32: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  146 |     HAL_UART_Transmit(&huart2, data, strlen((char*)data), HAL_MAX_DELAY);
+      |                                ^~~~
+      |                                |
+      |                                char *
+In file included from ../Core/Inc/stm32wlxx_hal_conf.h:305,
+                 from ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_uart.h:1616:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1616 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  41540	    488	   1808	  43836	   ab3c	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:36:40 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+../Core/Src/main.c:134:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  134 |     while((char*)receivedData[position] != '\n') {
+      |           ^
+../Core/Src/main.c:134:41: warning: comparison between pointer and integer
+  134 |     while((char*)receivedData[position] != '\n') {
+      |                                         ^~
+../Core/Src/main.c:146:32: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  146 |     HAL_UART_Transmit(&huart2, data, strlen((char*)data), HAL_MAX_DELAY);
+      |                                ^~~~
+      |                                |
+      |                                char *
+In file included from ../Core/Inc/stm32wlxx_hal_conf.h:305,
+                 from ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_uart.h:1616:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1616 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  41540	    488	   1808	  43836	   ab3c	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:37:33 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:134:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+  134 |     while((char*)receivedData[position] != '\n') {
+      |           ^
+../Core/Src/main.c:134:41: warning: comparison between pointer and integer
+  134 |     while((char*)receivedData[position] != '\n') {
+      |                                         ^~
+../Core/Src/main.c:148:32: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  148 |     HAL_UART_Transmit(&huart2, data, strlen((char*)data), HAL_MAX_DELAY);
+      |                                ^~~~
+      |                                |
+      |                                char *
+In file included from ../Core/Inc/stm32wlxx_hal_conf.h:305,
+                 from ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_uart.h:1616:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1616 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:146:26: warning: '%s' directive writing up to 999 bytes into a region of size 94 [-Wformat-overflow=]
+  146 |     sprintf(data, "START %s END\r\n", (char*)filteredMessage);
+      |                          ^~                  ~~~~~~~~~~~~~~~
+../Core/Src/main.c:146:5: note: 'sprintf' output between 13 and 1012 bytes into a destination of size 100
+  146 |     sprintf(data, "START %s END\r\n", (char*)filteredMessage);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  41460	    488	   1808	  43756	   aaec	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:38:40 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:134:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  134 |     while((char*)receivedData[position] != '\n') {
+      |           ^
+../Core/Src/main.c:134:41: warning: comparison between pointer and integer
+  134 |     while((char*)receivedData[position] != '\n') {
+      |                                         ^~
+../Core/Src/main.c:143:13: error: 'data' undeclared (first use in this function)
+  143 |     sprintf(data, "START %s END\r\n", (char*)filteredMessage);
+      |             ^~~~
+../Core/Src/main.c:143:13: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+11:38:53 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:134:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  134 |     while((char*)receivedData[position] != '\n') {
+      |           ^
+../Core/Src/main.c:134:41: warning: comparison between pointer and integer
+  134 |     while((char*)receivedData[position] != '\n') {
+      |                                         ^~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  41404	    488	   1808	  43700	   aab4	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:43:21 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:134:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  134 |     while((char*)receivedData[position] != '\n') {
+      |           ^
+../Core/Src/main.c:134:41: warning: comparison between pointer and integer
+  134 |     while((char*)receivedData[position] != '\n') {
+      |                                         ^~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  41404	    488	   1808	  43700	   aab4	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:45:06 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:134:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  134 |     while((char*)receivedData[position] != '\n') {
+      |           ^
+../Core/Src/main.c:134:41: warning: comparison between pointer and integer
+  134 |     while((char*)receivedData[position] != '\n') {
+      |                                         ^~
+../Core/Src/main.c:89:30: warning: unused variable 'time' [-Wunused-variable]
+   89 |   float latitude, longitude, time;
+      |                              ^~~~
+../Core/Src/main.c:89:19: warning: unused variable 'longitude' [-Wunused-variable]
+   89 |   float latitude, longitude, time;
+      |                   ^~~~~~~~~
+../Core/Src/main.c:89:9: warning: unused variable 'latitude' [-Wunused-variable]
+   89 |   float latitude, longitude, time;
+      |         ^~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  39176	    488	   1808	  41472	   a200	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+11:53:07 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:134:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+  134 |     while((char*)receivedData[position] != '\n') {
+      |           ^
+../Core/Src/main.c:134:41: warning: comparison between pointer and integer
+  134 |     while((char*)receivedData[position] != '\n') {
+      |                                         ^~
+../Core/Src/main.c:89:30: warning: unused variable 'time' [-Wunused-variable]
+   89 |   float latitude, longitude, time;
+      |                              ^~~~
+../Core/Src/main.c:89:19: warning: unused variable 'longitude' [-Wunused-variable]
+   89 |   float latitude, longitude, time;
+      |                   ^~~~~~~~~
+../Core/Src/main.c:89:9: warning: unused variable 'latitude' [-Wunused-variable]
+   89 |   float latitude, longitude, time;
+      |         ^~~~~~~~
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  39168	    488	   1808	  41464	   a1f8	BusTracker_CM4.elf
 Finished building: default.size.stdout
  
 Finished building: BusTracker_CM4.list

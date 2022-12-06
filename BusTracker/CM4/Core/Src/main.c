@@ -79,14 +79,12 @@ int main(void)
 
   /* USER CODE BEGIN Init */
   uint8_t receivedData[1000];
+  uint8_t filteredMessage[1000];
 
-  char stringGPSData[1000];
-  char buff[100];
+  char buff[1000];
   char *ptr;
 
-  int messageIndex = 0;
-
-  const char* desiredNMEA = "GPRMC";
+  const char desiredNMEA[] = "GPRMC";
 
   float latitude, longitude, time;
 
@@ -128,35 +126,21 @@ int main(void)
 		  }
 	  }
 
+	  ptr = strstr((char*)receivedData, desiredNMEA);
 
-	  // Parsing GPGGA data
-	  strcpy(stringGPSData, (char*)receivedData);
-	  ptr = strstr(stringGPSData, desiredNMEA);
+	  if(ptr) {
+		  int position = ptr - (char*)receivedData;
 
-	  if(*ptr == 'GPRMC') {
-		  while(1) {
-			  buff[messageIndex] = *ptr;
-			  messageIndex++;
-
-			  *ptr = *(ptr + messageIndex);
-
-			  if (*ptr == '\n') {
-				  buff[messageIndex] = '\0';
-				  break;
-			  }
+		  while((char*)receivedData[position] != '\n') {
+			  filteredMessage[position] = filteredMessage[position];
+			  position++;
 		  }
 
-		  sscanf(buff, "GPRMC,%f,A,%f,N,%f,", &time, &latitude, &longitude);
+		  filteredMessage[position] = '\0';
 
-		  char data[100];
-		  sprintf(data, "Time: %f Lat: %f Long: %f", time, latitude, longitude);
-
-		  HAL_UART_Transmit(&huart2, (uint8_t*)data, strlen(data), HAL_MAX_DELAY);
-
-		  HAL_Delay(1);
+		  HAL_UART_Transmit(&huart2, filteredMessage, strlen((char*)filteredMessage), HAL_MAX_DELAY);
+		  HAL_Delay(500);
 	  }
-
-	  // Parsing data
 
     /* USER CODE END WHILE */
 
