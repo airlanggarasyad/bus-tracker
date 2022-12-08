@@ -1523,3 +1523,4 @@
 2022-12-08 11:31:09,526 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
 2022-12-08 11:31:10,376 [INFO] OpenFileManager:327 - Restore cursor
 2022-12-08 11:31:25,113 [INFO] I2cTimingTraitement:329 - 0x00000E14
+2022-12-08 18:09:35,958 [ERROR] ConfigurationRetriever:139 - IOException on connection: Read timed out

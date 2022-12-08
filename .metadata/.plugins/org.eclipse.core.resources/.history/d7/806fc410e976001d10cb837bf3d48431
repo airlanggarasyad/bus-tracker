@@ -129,7 +129,7 @@ int main(void)
 	  char data[64];
 	  sprintf(data, "Time: %.3f Lat: %.6f Lon:%.6f\r\n", teseoData.time, teseoData.latitude, teseoData.longitude);
 
-	  HAL_UART_Transmit(&huart2, (uint8_t*)data, sizeof data, HAL_MAX_DELAY);
+	  HAL_UART_Transmit(&huart2, data, sizeof data, HAL_MAX_DELAY);
 	  HAL_Delay(500);
     /* USER CODE END WHILE */
 
