@@ -158,7 +158,6 @@ int main(void)
 	  HAL_Delay(500);
 
 	 HAL_UART_Transmit(&huart2, data, sizeof data, HAL_MAX_DELAY);
-	 HAL_Delay(500);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

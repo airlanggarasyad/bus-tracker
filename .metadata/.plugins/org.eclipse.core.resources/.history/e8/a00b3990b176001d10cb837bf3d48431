@@ -46,6 +46,7 @@ UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
 static const uint8_t TESEO_LIV3FL_ADDRESS = 0x3A << 1;
+static const uint8_t REG_DATA = 0x00;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -54,14 +55,7 @@ static void MX_GPIO_Init(void);
 static void MX_USART2_UART_Init(void);
 static void MX_I2C1_Init(void);
 /* USER CODE BEGIN PFP */
-float DDM_To_DD(float ddm) {
-    float degree = floor(ddm/100);
-    float minute = ddm - ((degree * 100));
 
-    float dd = degree + minute / 60.0;
-
-    return dd;
-}
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -85,7 +79,9 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-  uint8_t receivedData[1000];
+  uint8_t receivedData[75];
+  uint8_t data1[75];
+  uint8_t data2[75];
   uint8_t buff[100];
 
   const char* desiredNMEA = "$GPGGA";
@@ -127,37 +123,10 @@ int main(void)
 		  }
 	  }
 
-	  char *desiredNMEA = "GPGGA";
-	  char stringData[1024];
-	  char filteredMessage[512];
-	  char *ptr;
+	 sprintf((char*)buff, "%s", (char*)receivedData);
 
-	  float time, latitude, longitude;
+	 HAL_UART_Transmit(&huart2, receivedData, sizeof receivedData, HAL_MAX_DELAY);
 
-	  strcpy(stringData, (char*)receivedData);
-	  ptr = strstr(stringData, desiredNMEA);
-
-	  int position = ptr - stringData;
-	  int i = 0;
-
-	  while(stringData[position] != '\n') {
-		  filteredMessage[i] = stringData[position];
-		  i++;
-		  position++;
-	  }
-
-	  char data[64];
-
-	  sscanf(filteredMessage, "GPGGA,%f,%f,S,%f,E,", &time, &latitude, &longitude);
-
-	  longitude = DDM_To_DD(longitude);
-	  latitude = -1 * DDM_To_DD(latitude);
-
-	  sprintf(data, "Time: %.3f Lat: %.6f Lon:%.6f\r\n", time, latitude, longitude);
-
-	  HAL_Delay(500);
-
-	 HAL_UART_Transmit(&huart2, data, sizeof data, HAL_MAX_DELAY);
 	 HAL_Delay(500);
     /* USER CODE END WHILE */
 

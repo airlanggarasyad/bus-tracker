@@ -153,11 +153,12 @@ int main(void)
 	  longitude = DDM_To_DD(longitude);
 	  latitude = -1 * DDM_To_DD(latitude);
 
-	  sprintf(data, "Time: %.3f Lat: %.6f Lon:%.6f\r\n", time, latitude, longitude);
+	  sprintf(data, "Time: %.3f Lon: %.6f Lat:%.6f\r\n", time, longitude, latitude);
 
 	  HAL_Delay(500);
 
 	 HAL_UART_Transmit(&huart2, data, sizeof data, HAL_MAX_DELAY);
+
 	 HAL_Delay(500);
     /* USER CODE END WHILE */
 
