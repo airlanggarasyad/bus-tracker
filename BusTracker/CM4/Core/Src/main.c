@@ -21,7 +21,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include <stdio.h>
+#include <string.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -41,11 +42,10 @@
 /* Private variables ---------------------------------------------------------*/
 I2C_HandleTypeDef hi2c1;
 
-UART_HandleTypeDef huart1;
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
-
+static const uint8_t TESEO_LIV3FL_ADDRESS = 0x3A << 1;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -53,9 +53,15 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_USART2_UART_Init(void);
 static void MX_I2C1_Init(void);
-static void MX_USART1_UART_Init(void);
 /* USER CODE BEGIN PFP */
+float DDM_To_DD(float ddm) {
+    float degree = floor(ddm/100);
+    float minute = ddm - ((degree * 100));
 
+    float dd = degree + minute / 60.0;
+
+    return dd;
+}
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -79,8 +85,12 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-  uint8_t receivedData[100] = {0};
-  uint8_t message[15] = "Received Data: ";
+  uint8_t receivedData[1000];
+  uint8_t buff[100];
+
+  const char* desiredNMEA = "$GPGGA";
+
+  HAL_StatusTypeDef ret;
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -94,7 +104,6 @@ int main(void)
   MX_GPIO_Init();
   MX_USART2_UART_Init();
   MX_I2C1_Init();
-  MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
@@ -106,18 +115,52 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  ret = HAL_I2C_IsDeviceReady(&hi2c1, TESEO_LIV3FL_ADDRESS, 2, 10);
+
+	  if (ret != HAL_OK) {
+		  sprintf((char*)buff, "Device is not ready \r\n");
+	  } else {
+		  ret = HAL_I2C_Master_Receive(&hi2c1, TESEO_LIV3FL_ADDRESS, receivedData, sizeof(receivedData), HAL_MAX_DELAY);
+
+		  if (ret != HAL_OK) {
+			  sprintf((char*)buff, "Error Rx \r\n");
+		  }
+	  }
+
+	  char *desiredNMEA = "GPGGA";
+	  char stringData[1024];
+	  char filteredMessage[512];
+	  char *ptr;
+
+	  float time, latitude, longitude;
+
+	  strcpy(stringData, (char*)receivedData);
+	  ptr = strstr(stringData, desiredNMEA);
+
+	  int position = ptr - stringData;
+	  int i = 0;
+
+	  while(stringData[position] != '\n') {
+		  filteredMessage[i] = stringData[position];
+		  i++;
+		  position++;
+	  }
+
+	  char data[64];
+
+	  sscanf(filteredMessage, "GPGGA,%f,%f,S,%f,E,", &time, &latitude, &longitude);
+
+	  longitude = DDM_To_DD(longitude);
+	  latitude = -1 * DDM_To_DD(latitude);
+
+	  sprintf(data, "Time: %.3f Lat: %.6f Lon:%.6f\r\n", time, latitude, longitude);
+
+	  HAL_Delay(500);
+
+	 HAL_UART_Transmit(&huart2, data, sizeof data, HAL_MAX_DELAY);
+	 HAL_Delay(500);
     /* USER CODE END WHILE */
-	  if (HAL_I2C_IsDeviceReady(&hi2c1, 0x3A <<1 + 0, 2, 10) == HAL_OK) {
-	  		HAL_I2C_Master_Receive(&hi2c1,  0x3A <<1 + 0, (uint8_t *)receivedData, sizeof(receivedData), 1000);
 
-	  		HAL_UART_Transmit(&huart2, (uint8_t*)message, sizeof(message), HAL_MAX_DELAY);
-	  		HAL_UART_Transmit(&huart2, (uint8_t*)receivedData, sizeof(receivedData), HAL_MAX_DELAY);
-
-	  		while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY);
-	  	} else {
-	  		uint8_t state[10] = "DEVICE IS NOT READY\n";
-	  		HAL_UART_Transmit(&huart2, (uint8_t*)state, sizeof(state), HAL_MAX_DELAY);
-	  	}
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -217,54 +260,6 @@ static void MX_I2C1_Init(void)
   /* USER CODE BEGIN I2C1_Init 2 */
 
   /* USER CODE END I2C1_Init 2 */
-
-}
-
-/**
-  * @brief USART1 Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_USART1_UART_Init(void)
-{
-
-  /* USER CODE BEGIN USART1_Init 0 */
-
-  /* USER CODE END USART1_Init 0 */
-
-  /* USER CODE BEGIN USART1_Init 1 */
-
-  /* USER CODE END USART1_Init 1 */
-  huart1.Instance = USART1;
-  huart1.Init.BaudRate = 115200;
-  huart1.Init.WordLength = UART_WORDLENGTH_8B;
-  huart1.Init.StopBits = UART_STOPBITS_1;
-  huart1.Init.Parity = UART_PARITY_NONE;
-  huart1.Init.Mode = UART_MODE_TX_RX;
-  huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
-  huart1.Init.OverSampling = UART_OVERSAMPLING_16;
-  huart1.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
-  huart1.Init.ClockPrescaler = UART_PRESCALER_DIV1;
-  huart1.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
-  if (HAL_UART_Init(&huart1) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  if (HAL_UARTEx_SetTxFifoThreshold(&huart1, UART_TXFIFO_THRESHOLD_1_8) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  if (HAL_UARTEx_SetRxFifoThreshold(&huart1, UART_RXFIFO_THRESHOLD_1_8) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  if (HAL_UARTEx_DisableFifoMode(&huart1) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN USART1_Init 2 */
-
-  /* USER CODE END USART1_Init 2 */
 
 }
 
