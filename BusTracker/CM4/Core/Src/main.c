@@ -23,6 +23,7 @@
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
 #include <string.h>
+#include <math.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -46,6 +47,10 @@ UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
 static const uint8_t TESEO_LIV3FL_ADDRESS = 0x3A << 1;
+
+struct GPS_Data_t {
+	  float latitude, longitude, time;
+  };
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -54,14 +59,8 @@ static void MX_GPIO_Init(void);
 static void MX_USART2_UART_Init(void);
 static void MX_I2C1_Init(void);
 /* USER CODE BEGIN PFP */
-float DDM_To_DD(float ddm) {
-    float degree = floor(ddm/100);
-    float minute = ddm - ((degree * 100));
-
-    float dd = degree + minute / 60.0;
-
-    return dd;
-}
+float DDM_To_DD(float ddm);
+struct GPS_Data_t Parse_NMEA(uint8_t* receivedData);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -85,10 +84,8 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-  uint8_t receivedData[1000];
-  uint8_t buff[100];
-
-  const char* desiredNMEA = "$GPGGA";
+  uint8_t receivedData[1024];
+  uint8_t buff[200];
 
   HAL_StatusTypeDef ret;
   /* USER CODE END Init */
@@ -105,7 +102,7 @@ int main(void)
   MX_USART2_UART_Init();
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
-
+  struct GPS_Data_t teseoData;
   /* USER CODE END 2 */
 
   /* Boot CPU2 */
@@ -127,38 +124,16 @@ int main(void)
 		  }
 	  }
 
-	  char *desiredNMEA = "GPGGA";
-	  char stringData[1024];
-	  char filteredMessage[512];
-	  char *ptr;
+	  teseoData = Parse_NMEA(receivedData);
 
-	  float time, latitude, longitude;
+	  char data[47];
+	  sprintf(data, "Time: %.3f Lat: %.6f Lon:%.6f\r\n", teseoData.time, teseoData.latitude, teseoData.longitude);
 
-	  strcpy(stringData, (char*)receivedData);
-	  ptr = strstr(stringData, desiredNMEA);
-
-	  int position = ptr - stringData;
-	  int i = 0;
-
-	  while(stringData[position] != '\n') {
-		  filteredMessage[i] = stringData[position];
-		  i++;
-		  position++;
-	  }
-
-	  char data[64];
-
-	  sscanf(filteredMessage, "GPGGA,%f,%f,S,%f,E,", &time, &latitude, &longitude);
-
-	  longitude = DDM_To_DD(longitude);
-	  latitude = -1 * DDM_To_DD(latitude);
-
-	  sprintf(data, "Time: %.3f Lat: %.6f Lon:%.6f\r\n", time, latitude, longitude);
-
+	  HAL_UART_Transmit(&huart2, (uint8_t*)data, sizeof data, HAL_MAX_DELAY);
+	  printf("%s", data);
 	  HAL_Delay(500);
+//	  HAL_UART_Transmit(&huart2, (uint8_t*)receivedData, sizeof receivedData, HAL_MAX_DELAY);
 
-	 HAL_UART_Transmit(&huart2, data, sizeof data, HAL_MAX_DELAY);
-	 HAL_Delay(500);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -327,7 +302,58 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+float DDM_To_DD(float ddm) {
+    float degree = floor(ddm/100);
+    float minute = ddm - ((degree * 100));
 
+    float dd = degree + minute / 60.0;
+
+    return dd;
+}
+
+struct GPS_Data_t Parse_NMEA(uint8_t* receivedData) {
+	char *desiredNMEA = "GPGGA";
+	char stringData[1024];
+	char filteredMessage[512];
+	char *ptr;
+
+	struct GPS_Data_t data;
+
+	strcpy(stringData, (char*)receivedData);
+	ptr = strstr(stringData, desiredNMEA);
+
+	int position = ptr - stringData;
+	int i = 0;
+
+	while(stringData[position] != '\n') {
+		filteredMessage[i] = stringData[position];
+		i++;
+		position++;
+	}
+
+	printf("GPGGA: %s\r\n", filteredMessage);
+
+	sscanf(filteredMessage, "GPGGA,%f,%f,S,%f,E,", &data.time, &data.latitude, &data.longitude);
+
+	data.longitude = DDM_To_DD(data.longitude);
+	data.latitude = -1 * DDM_To_DD(data.latitude);
+
+	return data;
+}
+
+int __io_putchar(int ch) {
+	HAL_UART_Transmit(&huart2, (uint8_t*)&ch, 1, 0xFFFF);
+	return ch;
+}
+
+int __io_getchar(void) {
+	int ch = 0;
+
+	while(!__HAL_UART_GET_FLAG(&huart2, UART_FLAG_RXNE)) {
+		HAL_UART_Receive(&huart2, (uint8_t*)&ch, 1, 0xFFF);
+		return ch;
+	}
+}
 /* USER CODE END 4 */
 
 /**
