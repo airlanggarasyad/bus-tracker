@@ -12,3 +12,322 @@ Finished building: default.size.stdout
  
 Finished building: BusTracker_CM4.list
  
+08:57:12 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-size   BusTracker_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  43300	    488	   1808	  45596	   b21c	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+08:58:02 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  43300	    488	   1808	  45596	   b21c	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+09:02:55 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  43220	    488	   1808	  45516	   b1cc	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+09:03:29 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:105:21: warning: unused variable 'teseoData' [-Wunused-variable]
+  105 |   struct GPS_Data_t teseoData;
+      |                     ^~~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  38904	    488	   1808	  41200	   a0f0	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+09:03:57 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:105:21: warning: unused variable 'teseoData' [-Wunused-variable]
+  105 |   struct GPS_Data_t teseoData;
+      |                     ^~~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  38904	    488	   1808	  41200	   a0f0	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+09:05:12 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:105:21: warning: unused variable 'teseoData' [-Wunused-variable]
+  105 |   struct GPS_Data_t teseoData;
+      |                     ^~~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  38904	    488	   1808	  41200	   a0f0	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+09:05:43 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:105:21: warning: unused variable 'teseoData' [-Wunused-variable]
+  105 |   struct GPS_Data_t teseoData;
+      |                     ^~~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  38904	    488	   1808	  41200	   a0f0	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+09:06:00 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:105:21: warning: unused variable 'teseoData' [-Wunused-variable]
+  105 |   struct GPS_Data_t teseoData;
+      |                     ^~~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  38904	    488	   1808	  41200	   a0f0	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+09:06:24 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:105:21: warning: unused variable 'teseoData' [-Wunused-variable]
+  105 |   struct GPS_Data_t teseoData;
+      |                     ^~~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  38904	    488	   1808	  41200	   a0f0	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+09:06:41 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:105:21: warning: unused variable 'teseoData' [-Wunused-variable]
+  105 |   struct GPS_Data_t teseoData;
+      |                     ^~~~~~~~~
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  38904	    488	   1808	  41200	   a0f0	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+09:07:11 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  43220	    488	   1808	  45516	   b1cc	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+09:08:10 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  43300	    488	   1808	  45596	   b21c	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+09:08:29 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  43300	    488	   1808	  45596	   b21c	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+09:15:58 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function '__io_getchar':
+../Core/Src/main.c:354:1: warning: control reaches end of non-void function [-Wreturn-type]
+  354 | }
+      | ^
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  44060	    488	   1808	  46356	   b514	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+09:16:26 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:105:21: warning: unused variable 'teseoData' [-Wunused-variable]
+  105 |   struct GPS_Data_t teseoData;
+      |                     ^~~~~~~~~
+../Core/Src/main.c: In function '__io_getchar':
+../Core/Src/main.c:354:1: warning: control reaches end of non-void function [-Wreturn-type]
+  354 | }
+      | ^
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  39748	    488	   1808	  42044	   a43c	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+09:16:50 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:105:21: warning: unused variable 'teseoData' [-Wunused-variable]
+  105 |   struct GPS_Data_t teseoData;
+      |                     ^~~~~~~~~
+../Core/Src/main.c: In function '__io_getchar':
+../Core/Src/main.c:354:1: warning: control reaches end of non-void function [-Wreturn-type]
+  354 | }
+      | ^
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  39556	    488	   1808	  41852	   a37c	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+09:17:20 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function '__io_getchar':
+../Core/Src/main.c:354:1: warning: control reaches end of non-void function [-Wreturn-type]
+  354 | }
+      | ^
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  43892	    488	   1808	  46188	   b46c	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+09:18:44 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function '__io_getchar':
+../Core/Src/main.c:354:1: warning: control reaches end of non-void function [-Wreturn-type]
+  354 | }
+      | ^
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  43892	    488	   1808	  46188	   b46c	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 
+09:19:45 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function '__io_getchar':
+../Core/Src/main.c:356:1: warning: control reaches end of non-void function [-Wreturn-type]
+  356 | }
+      | ^
+arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BusTracker_CM4.elf
+ 
+arm-none-eabi-size   BusTracker_CM4.elf 
+arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  43924	    488	   1808	  46220	   b48c	BusTracker_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: BusTracker_CM4.list
+ 

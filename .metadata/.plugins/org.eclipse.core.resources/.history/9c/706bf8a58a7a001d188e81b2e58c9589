@@ -84,8 +84,8 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-  uint8_t receivedData[1024];
-  uint8_t buff[200];
+  uint8_t receivedData[1000];
+  uint8_t buff[256];
 
   HAL_StatusTypeDef ret;
   /* USER CODE END Init */
@@ -122,17 +122,15 @@ int main(void)
 		  if (ret != HAL_OK) {
 			  sprintf((char*)buff, "Error Rx \r\n");
 		  }
+
+//		  teseoData = Parse_NMEA(receivedData);
+//
+//		  char data[64];
+//		  sprintf(data, "Time: %.3f Lat: %.6f Lon:%.6f\r\n", teseoData.time, teseoData.latitude, teseoData.longitude);
+//
+//		  HAL_UART_Transmit(&huart2, (uint8_t*)data, sizeof data, HAL_MAX_DELAY);
+		  HAL_UART_Transmit(&huart2, (uint8_t*)receivedData, sizeof receivedData, HAL_MAX_DELAY);
 	  }
-
-	  teseoData = Parse_NMEA(receivedData);
-
-	  char data[47];
-	  sprintf(data, "Time: %.3f Lat: %.6f Lon:%.6f\r\n", teseoData.time, teseoData.latitude, teseoData.longitude);
-
-	  HAL_UART_Transmit(&huart2, (uint8_t*)data, sizeof data, HAL_MAX_DELAY);
-	  printf("%s", data);
-	  HAL_Delay(500);
-//	  HAL_UART_Transmit(&huart2, (uint8_t*)receivedData, sizeof receivedData, HAL_MAX_DELAY);
 
     /* USER CODE END WHILE */
 
@@ -331,28 +329,12 @@ struct GPS_Data_t Parse_NMEA(uint8_t* receivedData) {
 		position++;
 	}
 
-	printf("GPGGA: %s\r\n", filteredMessage);
-
 	sscanf(filteredMessage, "GPGGA,%f,%f,S,%f,E,", &data.time, &data.latitude, &data.longitude);
 
 	data.longitude = DDM_To_DD(data.longitude);
 	data.latitude = -1 * DDM_To_DD(data.latitude);
 
 	return data;
-}
-
-int __io_putchar(int ch) {
-	HAL_UART_Transmit(&huart2, (uint8_t*)&ch, 1, 0xFFFF);
-	return ch;
-}
-
-int __io_getchar(void) {
-	int ch = 0;
-
-	while(!__HAL_UART_GET_FLAG(&huart2, UART_FLAG_RXNE)) {
-		HAL_UART_Receive(&huart2, (uint8_t*)&ch, 1, 0xFFF);
-		return ch;
-	}
 }
 /* USER CODE END 4 */
 

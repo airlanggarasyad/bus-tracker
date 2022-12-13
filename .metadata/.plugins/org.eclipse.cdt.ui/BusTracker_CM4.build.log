@@ -1,17 +1,21 @@
-18:11:30 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
+09:19:45 **** Incremental Build of configuration Debug for project BusTracker_CM4 ****
 make -j7 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function '__io_getchar':
+../Core/Src/main.c:356:1: warning: control reaches end of non-void function [-Wreturn-type]
+  356 | }
+      | ^
 arm-none-eabi-gcc -o "BusTracker_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/airlanggafidiyanto/Documents/Kuliah/Skripsi/bus-tracker/BusTracker/CM4/STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BusTracker_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: BusTracker_CM4.elf
  
 arm-none-eabi-size   BusTracker_CM4.elf 
 arm-none-eabi-objdump -h -S  BusTracker_CM4.elf  > "BusTracker_CM4.list"
    text	   data	    bss	    dec	    hex	filename
-  43300	    488	   1808	  45596	   b21c	BusTracker_CM4.elf
+  43924	    488	   1808	  46220	   b48c	BusTracker_CM4.elf
 Finished building: default.size.stdout
  
 Finished building: BusTracker_CM4.list
  
 
-18:11:30 Build Finished. 0 errors, 0 warnings. (took 684ms)
+09:19:46 Build Finished. 0 errors, 1 warnings. (took 1s.13ms)
 

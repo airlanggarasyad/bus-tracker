@@ -331,8 +331,6 @@ struct GPS_Data_t Parse_NMEA(uint8_t* receivedData) {
 		position++;
 	}
 
-	printf("GPGGA: %s\r\n", filteredMessage);
-
 	sscanf(filteredMessage, "GPGGA,%f,%f,S,%f,E,", &data.time, &data.latitude, &data.longitude);
 
 	data.longitude = DDM_To_DD(data.longitude);
