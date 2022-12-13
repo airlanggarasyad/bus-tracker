@@ -129,11 +129,9 @@ int main(void)
 	  char data[47];
 	  sprintf(data, "Time: %.3f Lat: %.6f Lon:%.6f\r\n", teseoData.time, teseoData.latitude, teseoData.longitude);
 
-	  HAL_UART_Transmit(&huart2, (uint8_t*)data, sizeof data, HAL_MAX_DELAY);
 	  printf("%s", data);
-	  HAL_Delay(500);
-//	  HAL_UART_Transmit(&huart2, (uint8_t*)receivedData, sizeof receivedData, HAL_MAX_DELAY);
 
+	  HAL_Delay(500);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -331,14 +329,14 @@ struct GPS_Data_t Parse_NMEA(uint8_t* receivedData) {
 		position++;
 	}
 
-	printf("GPGGA: %s\r\n", filteredMessage);
+	if (filteredMessage) {
+		sscanf(filteredMessage, "GPGGA,%f,%f,S,%f,E,", &data.time, &data.latitude, &data.longitude);
 
-	sscanf(filteredMessage, "GPGGA,%f,%f,S,%f,E,", &data.time, &data.latitude, &data.longitude);
+		data.longitude = DDM_To_DD(data.longitude);
+		data.latitude = -1 * DDM_To_DD(data.latitude);
 
-	data.longitude = DDM_To_DD(data.longitude);
-	data.latitude = -1 * DDM_To_DD(data.latitude);
-
-	return data;
+		return data;
+	}
 }
 
 int __io_putchar(int ch) {
