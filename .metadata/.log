@@ -2354,3 +2354,9 @@ java.lang.Exception: The project description file (.project) for 'BusTracker_CM4
 	at org.eclipse.ui.actions.OpenResourceAction$1.runInWorkspace(OpenResourceAction.java:279)
 	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-01-12 17:24:21.008
+!MESSAGE Indexed 'BusTracker_CM4' (18 sources, 87 headers) in 2.84 sec: 6,415 declarations; 26,856 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.006%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-01-12 17:24:22.397
+!MESSAGE Indexed 'BusTracker_CM0PLUS' (18 sources, 87 headers) in 1.38 sec: 5,865 declarations; 26,022 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0063%)
