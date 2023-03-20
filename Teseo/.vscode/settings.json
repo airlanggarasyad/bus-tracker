@@ -1,0 +1,22 @@
+{
+    "files.associations": {
+        "*.embeddedhtml": "html",
+        "teseo_liv3f_conf.h": "c",
+        "gnss_datalog.h": "c",
+        "stm32wlxx_nucleo_bus.h": "c",
+        "stm32wlxx_hal.h": "c",
+        "stm32wlxx_nucleo_errno.h": "c",
+        "gnss_lib_config.h": "c",
+        "ios": "c",
+        "app_gnss.h": "c",
+        "string.h": "c",
+        "stdint.h": "c",
+        "custom_board_conf.h": "c",
+        "custom_gnss.h": "c",
+        "gnss_data.h": "c",
+        "gnss_parser.h": "c",
+        "sstream": "c",
+        "stdio.h": "c",
+        "nmea_parser.h": "c"
+    }
+}

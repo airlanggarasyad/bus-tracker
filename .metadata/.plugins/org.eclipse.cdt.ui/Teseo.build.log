@@ -1,0 +1,10 @@
+09:17:41 **** Incremental Build of configuration Debug for project Teseo ****
+make -j7 all 
+arm-none-eabi-size   Teseo.elf 
+   text	   data	    bss	    dec	    hex	filename
+  61568	    492	   6240	  68300	  10acc	Teseo.elf
+Finished building: default.size.stdout
+ 
+
+09:17:41 Build Finished. 0 errors, 0 warnings. (took 293ms)
+
