@@ -122,24 +122,13 @@ __weak void CUSTOM_GNSS_UART_ClearOREF(void)
 #endif /* USE_I2C */
 #endif
 
-int32_t CUSTOM_GNSS_Init(uint32_t Instance)
+int32_t CUSTOM_GNSS_Init()
 {
   int32_t ret = BSP_ERROR_NONE;
 
-  switch (Instance)
+  if (TESEO_LIV3F_Probe() != BSP_ERROR_NONE)
   {
-#if (USE_CUSTOM_GNSS_TESEO_LIV3F == 1)
-    case CUSTOM_TESEO_LIV3F:
-      if (TESEO_LIV3F_Probe() != BSP_ERROR_NONE)
-      {
-        ret = BSP_ERROR_NO_INIT;
-      }
-      break;
-#endif
-
-    default:
-      ret = BSP_ERROR_WRONG_PARAM;
-      break;
+    ret = BSP_ERROR_NO_INIT;
   }
 
   return ret;
@@ -165,18 +154,11 @@ int32_t CUSTOM_GNSS_DeInit(uint32_t Instance)
   return ret;
 }
 
-const CUSTOM_GNSS_Msg_t* CUSTOM_GNSS_GetMessage(uint32_t Instance)
+const CUSTOM_GNSS_Msg_t* CUSTOM_GNSS_GetMessage()
 {
   const CUSTOM_GNSS_Msg_t* msg;
 
-  if (Instance >= CUSTOM_GNSS_INSTANCES_NBR)
-  {
-    msg = NULL;
-  }
-  else
-  {
-    msg = (CUSTOM_GNSS_Msg_t *)TESEO_LIV3F_GetMessage(&teseo_liv3f_obj);
-  }
+  msg = (CUSTOM_GNSS_Msg_t *)TESEO_LIV3F_GetMessage(&teseo_liv3f_obj);
 
   return msg;
 }

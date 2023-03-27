@@ -100,7 +100,7 @@ typedef struct
  * @param  Instance GNSS instance
  * @retval BSP status
  */
-int32_t CUSTOM_GNSS_Init(uint32_t Instance);
+int32_t CUSTOM_GNSS_Init();
 
 /**
  * @brief  Deinitialize GNSS
@@ -121,7 +121,7 @@ void    CUSTOM_GNSS_BackgroundProcess(uint32_t Instance);
  * @param  Instance GNSS instance
  * @retval The message buffer
  */
-const   CUSTOM_GNSS_Msg_t* CUSTOM_GNSS_GetMessage(uint32_t Instance);
+const   CUSTOM_GNSS_Msg_t* CUSTOM_GNSS_GetMessage();
 
 /**
  * @brief  Release the NMEA message buffer

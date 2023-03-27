@@ -1,20 +1,11 @@
 /**
   ******************************************************************************
   * @file    app_gnss.c
-  * @author  SRA Application Team
-  * @brief   GNSS initialization and applicative code
+  * @author  Airlangga Fidiyanto
+  * @date    2023
+  * @brief   GNSS process code
   ******************************************************************************
-  * @attention
-  *
-  * Copyright (c) 2023 STMicroelectronics.
-  * All rights reserved.
-  *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
-  *
-  ******************************************************************************
-  */
+**/
 
 /* Includes ------------------------------------------------------------------*/
 #include "app_gnss.h"
@@ -30,6 +21,8 @@
 #include "custom_gnss.h"
 #include "stm32wlxx_nucleo.h"
 #include "gnss_feature_cfg_data.h"
+
+#define GNSS_READABLE 0
 
 static GNSSParser_Data_t GNSSParser_Data;
 static uint8_t msg[256];
@@ -48,13 +41,13 @@ void MX_GNSS_Process(void)
   GNSSParser_Status_t status, check;
   const CUSTOM_GNSS_Msg_t *gnssMsg;
 
-  CUSTOM_GNSS_Init(CUSTOM_TESEO_LIV3F);
+  CUSTOM_GNSS_Init();
 
   GNSS_PARSER_Init(&GNSSParser_Data);
 
   for(;;)
   {
-    gnssMsg = CUSTOM_GNSS_GetMessage(CUSTOM_TESEO_LIV3F);
+    gnssMsg = CUSTOM_GNSS_GetMessage();
 
     if(gnssMsg == NULL)
     {
@@ -65,46 +58,60 @@ void MX_GNSS_Process(void)
 
     if(check != GNSS_PARSER_ERROR)
     {
-      for(int m = 0; m < NMEA_MSGS_NUM; m++)
+      for(int m = 0; m < 2; m++)
       {
         status = GNSS_PARSER_ParseMsg(&GNSSParser_Data, (eNMEAMsg)m, (uint8_t *)gnssMsg->buf);
-
         if((status != GNSS_PARSER_ERROR) && ((eNMEAMsg)m == GPGGA))
         {
-          GNSSParser_Data.gpgga_data.xyz.lat = Convert_to_Degree(GNSSParser_Data.gpgga_data.xyz.lat, GNSSParser_Data.gpgga_data.xyz.ns);
-          GNSSParser_Data.gpgga_data.xyz.lon = Convert_to_Degree(GNSSParser_Data.gpgga_data.xyz.lon, GNSSParser_Data.gpgga_data.xyz.ew);
-        
-          sprintf((char *)msg, "Lat:\t[ %f ]\n\r", GNSSParser_Data.gpgga_data.xyz.lat);
+          #if GNSS_READABLE
+          sprintf((char *)msg, "UTC  : %02d:%02d:%02d\r", GNSSParser_Data.gpgga_data.utc.hh, GNSSParser_Data.gpgga_data.utc.mm, GNSSParser_Data.gpgga_data.utc.ss);
           GNSS_PRINT((char *)msg);
 
-          sprintf((char *)msg, "Lat:\t[ %f ]\n\r", GNSSParser_Data.gpgga_data.xyz.lon);
+          sprintf((char *)msg, "LAT  : %f\r", GNSSParser_Data.gpgga_data.xyz.lat);
           GNSS_PRINT((char *)msg);
 
-          sprintf((char *)msg, "Satellites locked:\t[ %d ]\n\r", GNSSParser_Data.gpgga_data.sats);
+          sprintf((char *)msg, "LON  : %f\r", GNSSParser_Data.gpgga_data.xyz.lon);
           GNSS_PRINT((char *)msg);
+
+          sprintf((char *)msg, "ALT  : %f\r", GNSSParser_Data.gpgga_data.xyz.alt);
+          GNSS_PRINT((char *)msg);
+
+          sprintf((char *)msg, "HDOP : %.2f\r", GNSSParser_Data.gsa_data.hdop);
+          GNSS_PRINT((char *)msg);
+
+          sprintf((char *)msg, "SATS : %d\r", GNSSParser_Data.gpgga_data.sats);
+          GNSS_PRINT((char *)msg);
+
+          sprintf((char *)msg, "GEOF : %d\r\n\n", GNSSParser_Data.gpgga_data.xyz.is_inside_ugm);
+          GNSS_PRINT((char *)msg);
+          #else
+          sprintf((char *)msg, "%02d:%02d:%02d,", GNSSParser_Data.gpgga_data.utc.hh, GNSSParser_Data.gpgga_data.utc.mm, GNSSParser_Data.gpgga_data.utc.ss);
+          GNSS_PRINT((char *)msg);
+
+          sprintf((char *)msg, "%f,", GNSSParser_Data.gpgga_data.xyz.lat);
+          GNSS_PRINT((char *)msg);
+
+          sprintf((char *)msg, "%f,", GNSSParser_Data.gpgga_data.xyz.lon);
+          GNSS_PRINT((char *)msg);
+
+          sprintf((char *)msg, "%f,", GNSSParser_Data.gpgga_data.xyz.alt);
+          GNSS_PRINT((char *)msg);
+
+          sprintf((char *)msg, "%d,", GNSSParser_Data.gpgga_data.sats);
+          GNSS_PRINT((char *)msg);
+
+          sprintf((char *)msg, "%.2f,", GNSSParser_Data.gsa_data.hdop);
+          GNSS_PRINT((char *)msg);
+
+          sprintf((char *)msg, "%d\r", GNSSParser_Data.gpgga_data.xyz.is_inside_ugm);
+          GNSS_PRINT((char *)msg);
+          #endif
         }
       }
     }
 
     CUSTOM_GNSS_ReleaseMessage(CUSTOM_TESEO_LIV3F, gnssMsg);
   }
-}
-
-float64_t Convert_to_Degree(float64_t numeral, uint8_t sign) {
-  int32_t degrees;
-  float64_t ret;
-  float64_t minutes;
-
-  degrees = (int32_t) (numeral / 100.0F);
-  minutes = numeral - degrees * 100.0F;
-  ret = degrees + (minutes / 60.0F);
-
-  if (sign == 'S' || sign == 'W') {
-    ret = -ret;
-  }
-
-  return ret;
-
 }
 
 int GNSS_PRINT(char *pBuffer)
@@ -117,15 +124,3 @@ int GNSS_PRINT(char *pBuffer)
 
   return 0;
 }
-
-int GNSS_PUTC(char pChar)
-{
-  if (HAL_UART_Transmit(&hcom_uart[COM1], (uint8_t*)&pChar, 1, 1000) != HAL_OK)
-  {
-    return 1;
-  }
-  fflush(stdout);
-
-  return 0;
-}
-
