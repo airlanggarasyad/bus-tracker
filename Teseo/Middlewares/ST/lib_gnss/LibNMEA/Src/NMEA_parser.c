@@ -26,7 +26,7 @@
  * Constant for strtol base param
  */
 #define BASE 10
-
+#define HALTE_COUNTS 25
 /*
  * Enumeration structure that contains the two success states of a parsing process
  */
@@ -40,8 +40,37 @@ typedef enum {
 static void scan_utc(uint8_t *pUTCStr, UTC_Info_t *pUTC);
 static uint32_t nmea_checksum(const uint8_t buf[]);
 
+float32_t Calculate_Distance(Coords_t point_A, Coords_t point_B);
+
 /* Private variables ---------------------------------------------------------*/
 static uint8_t app[MAX_MSG_LEN][MAX_MSG_LEN];
+static float32_t halte_coords[HALTE_COUNTS][2] = {
+  {-7.769782,110.377246},
+  {-7.769875,110.378546},
+  {-7.772172,110.377843},
+  {-7.775712,110.376373},
+  {-7.774689,110.374963},
+  {-7.771454,110.375227},
+  {-7.769693,110.373557},
+  {-7.767620,110.374339},
+  {-7.766077,110.374062},
+  {-7.763426,110.372523},
+  {-7.764696,110.371217},
+  {-7.766508,110.370670},
+  {-7.766785,110.373073},
+  {-7.766407,110.374082},
+  {-7.765122,110.377152},
+  {-7.767003,110.382540},
+  {-7.768422,110.384516},
+  {-7.769712,110.385479},
+  {-7.768476,110.384185},
+  {-7.769691,110.381717},
+  {-7.771089,110.381336},
+  {-7.772668,110.379638},
+  {-7.774141,110.379543},
+  {-7.775571,110.378368},
+  {-7.761275,110.379287}
+};
 
 /*
  * Function that scans a string with UTC Info_t and fills all fields of a
@@ -133,6 +162,8 @@ ParseStatus_t NMEA_ParseGPGGA(GPGGA_Info_t *pGPGGAInfo, uint8_t NMEA[])
       pGPGGAInfo->xyz.lon = Convert_to_Degree(pGPGGAInfo->xyz.lon, pGPGGAInfo->xyz.ew);
 
       pGPGGAInfo->xyz.is_inside_ugm = Geofence_Check(pGPGGAInfo->xyz.lat, pGPGGAInfo->xyz.lon);
+
+      pGPGGAInfo->xyz.stopped_at_halte = Stopped_at_Halte(pGPGGAInfo->xyz);
 
       pGPGGAInfo->checksum = nmea_checksum(app[15]);
       
@@ -288,22 +319,53 @@ float64_t Convert_to_Degree(float64_t numeral, uint8_t sign) {
  */
 uint8_t Geofence_Check(float64_t latitude, float64_t longitude) {
   Coords_t ugm_coordinate;
-  float64_t distance = 0;
+  Coords_t current_coordinate;
 
-  ugm_coordinate.lat = -7.771376;
-  ugm_coordinate.lon = 110.377493;
+  float32_t distance = 0;
 
-  float64_t dLat = degToRad(ugm_coordinate.lat) - degToRad(latitude);
-  float64_t dLon = degToRad(ugm_coordinate.lon) - degToRad(longitude);
+  ugm_coordinate.lat = -7.769711;
+  ugm_coordinate.lon = 110.377441;
 
-  float64_t a = pow(sin(dLat / 2), 2) + pow(sin(dLon / 2), 2) * cos(latitude) * cos(longitude);
-  float64_t c = 2 * asin(sqrt(a));
+  current_coordinate.lat = latitude;
+  current_coordinate.lon = longitude;
 
-  distance = EARTH_RADIUS * c;
+  distance = Calculate_Distance(ugm_coordinate, current_coordinate);
 
   if (distance < 1000) {
     return 1;
   } else {
     return 0;
   }
+}
+
+float32_t Calculate_Distance(Coords_t point_A, Coords_t point_B) {
+  float64_t distance = 0;
+
+  float64_t dLat = degToRad(point_A.lat) - degToRad(point_B.lat);
+  float64_t dLon = degToRad(point_A.lon) - degToRad(point_B.lon);
+
+  float64_t a = pow(sin(dLat / 2), 2) + pow(sin(dLon / 2), 2) * cos(point_B.lat) * cos(point_B.lon);
+  float64_t c = 2 * asin(sqrt(a));
+
+  distance = EARTH_RADIUS * c;
+
+  return distance;
+}
+
+int8_t Stopped_at_Halte(Coords_t current_location) {
+  float64_t distance = 0;
+  Coords_t current_halte;
+
+  for (int i=0; i < HALTE_COUNTS; i++) {
+    current_halte.lat = halte_coords[i][0];
+    current_halte.lon = halte_coords[i][1];
+
+    distance = Calculate_Distance(current_location, current_halte);
+
+    if (distance < 10) {
+      return i;
+    }
+  }
+
+  return -1;
 }

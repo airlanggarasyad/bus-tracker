@@ -120,6 +120,7 @@ typedef struct {
   uint8_t ew;            /**< East / West longitude type */
   uint8_t mis;           /**< Altitude unit misure */
   uint8_t is_inside_ugm; /**< Geofence status */
+  int8_t stopped_at_halte;
 } Coords_t;
   
 /**
@@ -201,10 +202,10 @@ uint32_t char2int(uint8_t c);
 
 float64_t Convert_to_Degree(float64_t numeral, uint8_t sign);
 uint8_t Geofence_Check(float64_t latitude, float64_t longitude);
- 
+int8_t Stopped_at_Halte(Coords_t current_location);
+
 #ifdef __cplusplus
 }
 #endif
 
 #endif /* NMEA_PARSER_H */
-
